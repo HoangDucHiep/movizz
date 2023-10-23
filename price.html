@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<head>
+    <title>GiaVe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link rel="icon" type="image/x-icon" href="assests/price/img/logo.webp">
+    
+    <!-- bootstrap & css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- import incon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assests/price/css/styles.css">
+</head> 
+<body>
+
+    <header>
+        <!-- nav begin -->
+        <nav>
+            <div class="navbar">
+                <i class='fa-solid fa-bars'></i>
+                <!-- nav logo begin -->
+                <div class="logo-brand"><a href="index.html"><img src="assests/price/img/logo.webp" alt="Movizz logo" class="movie-logo"> Movizz</a></div>
+                <!-- nav logo end -->
+
+                <!-- nav menu begin -->
+                <div class="nav-links">
+                    <div class="sidebar-logo-brand">
+                        <span class="logo-brand-name">Movizz</span>
+                        <i class="fa-solid fa-xmark exit-sidebar"></i>
+                    </div>
+                    <ul class="links">
+                        <li>
+                            <a href="#" class="branch">Cụm rạp</a>
+                            <i class="fa-solid fa-chevron-up arrow branch-arrow"></i>
+                            <ul class="branch-sub-menu sub-menu">
+                                <li><a href="#" id="branch1">Ba Đình</a></li>
+                                <li><a href="#" id="branch2">Cầu Giấy</a></li>
+                                <li><a href="#" id="branch3">Thanh Xuân</a></li>
+                                <li class="branch-nguyen-trai" id="branch-4">
+                                    <a href="#">Nguyễn Trãi</a>
+                                    <i class="fa-solid fa-chevron-right arrow branch-nguyen-trai-arrow"></i>
+                                    <ul class="branch-nguyen-trai-sub-menu sub-menu">
+                                        <li><a href="#">Rạp 1</a></li>
+                                        <li><a href="#">Rạp 2</a></li>
+                                        <li><a href="#">Rạp 3</a></li>
+                                        <li><a href="#">Rạp 4</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Lịch Chiếu</a></li>
+                        <li><a href="sale.html">Khuyến Mãi</a></li>
+                        <li><a href="price.html">Giá</a></li>
+                        <li><a href="about.html">Giới Thiệu</a></li>
+                    </ul>
+                </div>
+                <!-- nav menu end -->
+                
+                <!-- nav most right begin (search, account)-->
+                <div class="nav-right">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <div class="input-box">
+                            <i class="fa-solid fa-magnifying-glass seach-submit"></i>
+                            <input type="text" placeholder="Search here">
+                        </div>
+                    </div>
+        
+                    <div class="account" data-bs-toggle="modal" data-bs-target="#myModal">
+                        <i  class="fa-regular fa-user acount-icon" data-bs-toggle="modal" data-bs-target="#myModal"></i>
+                    </div>
+
+                </div>
+                <!-- nav most right end (search, account)-->
+
+            </div>
+        </nav>
+        <!-- nav end -->
+        
+        <!-- login modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content sign-modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body sign-modal-body">
+                        <div id="login">
+                            <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
+                            <h2 class="login-form-header">Đăng nhập</h2>
+                            <form id="signin-form" action="/">
+                                <fieldset class="email-pass-acc">
+                                    <div class="email-sign">
+                                        <label for="email-sign">Email:</label>
+                                        <div class="input-field email-sign-input-field">
+                                            <i class="fa-regular fa-envelope input-icon"></i>
+                                            <input type="text" id="email-sign" name="email">
+                                            <div class="error"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="password-sign">
+                                    <label for="password-sign">Mật khẩu:</label>
+                                    <div class="input-field password-sign-input-field">
+                                        <i class="fa-solid fa-lock input-icon"></i>
+                                        <input type="password" name="password" id="password-sign">
+                                        <div id="pass-toggle" onclick="showHide();">
+                                            <i class="fa-regular fa-eye show-tog"></i>
+                                            <i class="fa-regular fa-eye-slash hide-tog"></i>
+                                        </div>
+                                        <div class="error"></div>
+                                    </div>
+                                    </div>
+                    
+                                    <div class="remember-and-forget-log">
+                                    <div class="remember-log">
+                                        <input type="checkbox" id="remember" name="remember">
+                                        <label for="remember">Nhớ tôi</label>
+                                    </div>
+                                    <div class="forget-log">
+                                        <a href="#" id="to-reset">Quên mật khẩu?</a>
+                                    </div>
+                                    </div>
+                                    
+                                    <div class="submit">
+                                        <button type="submit" id="login-sub">Đăng nhập</button>
+                                    </div>
+                                    
+                                </fieldset>
+                                
+
+                                <fieldset class="sign-with">
+                                    <p class="sign-with-text">Hoặc đăng nhập bằng</p>
+                                    <div class="other-med">
+                                    <a href="#"><img src="assests/price/img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
+                                    <a href="#"><img src="assests/price/img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="change-sign-up">
+                                    <a href="#" id="to-sign-up-link">Đăng kí</a>
+                                </fieldset>
+                            </form>
+                        </div>
+
+                        <!-- sign up -->
+                        <div id="signup">
+                            <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
+                            <h2 class="signup-form-header">Đăng kí</h2>
+                            <form action="/" id="signup-form">
+                                <fieldset class="email-pass-acc">
+                                    <div class="email-sign">
+                                        <label for="email-sign-up">Email:</label>
+                                        <div class="input-field email-sign-input-field">
+                                            <i class="fa-regular fa-envelope input-icon"></i>
+                                            <input type="email" id="email-sign-up" name="email-sn">
+                                            <div class="error"></div>
+                                        </div>
+                                    
+                                    </div>
+
+                                    <div class="name-sign">
+                                        <label for="name-sign-up">Họ và tên:</label>
+                                        <div class="input-field name-sign-input-field">
+                                            <i class="fa-regular fa-user input-icon"></i>
+                                            <input type="text" id="name-sign-up" name="name-sn">
+                                            <div class="error"></div>
+                                        </div>
+                                    
+                                    </div>
+
+                                    <div class="phone-sign">
+                                        <label for="phone-sign">Số điện thoại:</label>
+                                        <div class="input-field phone-sign-input-field">
+                                            <i class="fa-solid fa-phone input-icon"></i>
+                                            <input type="text" id="phone-sign-up" name="phone-sn">
+                                            <div class="error"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="password-sign">
+                                        <label for="password-sign-up">Mật khẩu:</label>
+                                        <div class="input-field password-sign-input-field">
+                                            <i class="fa-solid fa-lock input-icon"></i>
+                                            <input type="password" name="password-sn" id="password-sign-up">
+                                            <div id="pass-toggle-sn" onclick="showHidesn();">
+                                                <i class="fa-regular fa-eye show-tog"></i>
+                                                <i class="fa-regular fa-eye-slash hide-tog"></i>
+                                            </div>
+                                            <div class="error"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="password-sign">
+                                        <label for="password-sign-up-rp">Nhập lại mật khẩu:</label>
+                                        <div class="input-field password-sign-input-field">
+                                            <i class="fa-solid fa-lock input-icon"></i>
+                                            <input type="password" name="password-sn-rp" id="password-sign-up-rp">
+                                            <div id="pass-toggle-sn-rp" onclick="showHidesnrp();">
+                                                <i class="fa-regular fa-eye show-tog"></i>
+                                                <i class="fa-regular fa-eye-slash hide-tog"></i>
+                                            </div>
+                                            <div class="error"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="submit">
+                                        <button type="submit" id="signup-sub">Đăng kí</button>
+                                    </div>
+                                    
+                                </fieldset>
+                                
+
+                                <fieldset class="sign-with">
+                                    <p class="sign-with-text">Hoặc đăng kí bằng</p>
+                                    <div class="other-med">
+                                    <a href="#"><img src="assests/price/img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
+                                    <a href="#"><img src="assests/price/img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="change-sign-up">
+                                    <a href="#" id="to-login-link">Đăng nhập</a>
+                                </fieldset>
+                            </form>
+                        </div>
+
+
+                        <!-- forgot pass -->
+                        <div id="reset-pass">
+                            <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
+                            <h2 class="reset-pass-form-header">Quên mật khẩu</h2>
+                            <form id="reset-pass-form" action="/">
+                                <fieldset class="email-pass-acc">
+                                    <p id="reset-pass-guide">Liên kết đặt lại mặt khẩu sẽ được gửi vào email của bạn</p>
+                                    <div class="reset-pass">
+                                        <label for="reset-pass">Email:</label>
+                                        <div class="input-field reset-pass-input-field">
+                                            <i class="fa-regular fa-envelope input-icon"></i>
+                                            <input type="email" id="reset-pass-input" name="email">
+                                            <div class="error"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="submit">
+                                        <button type="submit" id="reset-sub">Gửi email đặt lại mật khẩu</button>
+                                    </div>
+                                    
+                                </fieldset>
+
+                                <fieldset class="change-sign-up">
+                                    <a href="#" id="back-login-link">Trở lại đăng nhập</a>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+    <main>
+        <h1>Giá vé</h1>
+        <div class="giave">
+
+        <div class="f2D" >
+            <h3>1. GIÁ VÉ XEM PHIM 2D</h3>
+            <table  class="table table-hover table-dark ">
+                <tr>
+                    <th colspan="1"></th>
+                    <th colspan="3">Thứ 2 đến thứ 5 </th>
+                    <th colspan="3">Thứ 6 đến chủ nhật</th>
+                </tr>
+                <tr>
+                    <th>Thời gian</th>
+                    <th>Ghế Thường</th>
+                    <th class="text-warning">Ghế VIP</th>
+                    <th class="text-danger">Ghế Đôi</th>
+                    <th>Ghế Thường</th>
+                    <th class="text-warning">Ghế VIP</th>
+                    <th class="text-danger">Ghế Đôi</th>
+                </tr>
+                <tr>
+                    <th>Trước 12h</th>
+                    <th>55.000</th>
+                    <th class="text-warning">65.000</th>
+                    <th class="text-danger">140.000</th>
+                    <th>70.000</th>
+                    <th class="text-warning">80.000</th>
+                    <th class="text-danger">170.000</th>
+                </tr>
+                <tr>
+                    <th>12h-17h</th>
+                    <th>70.000</th>
+                    <th class="text-warning">75.000</th>
+                    <th class="text-danger">160.000</th>
+                    <th>80.000</th>
+                    <th class="text-warning">85.000</th>
+                    <th class="text-danger">180.000</th>
+                </tr>
+                <tr>
+                    <th>17h-23h</th>
+                    <th>80.000</th>
+                    <th class="text-warning">85.000</th>
+                    <th class="text-danger">180.000</th>
+                    <th>90.000</th>
+                    <th class="text-warning">95.000</th>
+                    <th class="text-danger">200.000</th>
+                </tr>
+            </table>
+        </div>
+        <div class="f3D">
+            <h3>2. GIÁ VÉ XEM PHIM 3D</h3>
+            <table class="table table-hover  table-dark">
+                <tr>
+                    <th colspan="1"></th>
+                    <th colspan="3">Thứ 2 đến thứ 5 </th>
+                    <th colspan="3">Thứ 6 đến chủ nhật</th>
+                </tr>
+                <tr>
+                    <th>Thời gian</th>
+                    <th>Ghế Thường</th>
+                    <th class="text-warning">Ghế VIP</th>
+                    <th class="text-danger">Ghế Đôi</th>
+                    <th>Ghế Thường</th>
+                    <th class="text-warning">Ghế VIP</th>
+                    <th class="text-danger">Ghế Đôi</th>
+                </tr>
+                <tr>
+                    <th>Trước 12h</th>
+                    <th>60.000</th>
+                    <th class="text-warning">80.000</th>
+                    <th class="text-danger">160.000</th>
+                    <th>80.000</th>
+                    <th class="text-warning">100.000</th>
+                    <th class="text-danger">200.000</th>
+                </tr>
+                <tr>
+                    <th>12h-17h</th>
+                    <th>80.000</th>
+                    <th class="text-warning">90.000</th>
+                    <th class="text-danger">180.000</th>
+                    <th>100.000</th>
+                    <th class="text-warning">110.000</th>
+                    <th class="text-danger">220.000</th>
+                </tr>
+                <tr>
+                    <th>17h-23h</th>
+                    <th>100.000</th>
+                    <th class="text-warning">110.000</th>
+                    <th class="text-danger">220.000</th>
+                    <th>130.000</th>
+                    <th class="text-warning">140.000</th>
+                    <th class="text-danger">280.000</th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="UT">
+            <h3>3. GÍA VÉ ĐỐI VỚI ĐỐI TƯỢNG ƯU TIÊN</h3>
+            <ul>
+            <p> Giảm 20% giá vé<br> Giảm 50% giá vé<br> Giảm 100% giá vé</p> 
+            </ul>
+
+            <ul>
+                Điều kiện
+                <li>Áp dụng khi mua vé tại quầy</li>
+            </ul>
+        </div>
+        </div>
+        
+    </main>
+    
+
+    <footer>
+        <div class="row justify-content-center">
+                <div class="Company col-md-auto">
+                    <div class="footer-logo-brand"><a href="#"><img src="assests/price/img/logo.webp" alt="Movizz logo" class=" footer-logo"> Movizzz</a></div>
+                    <p class="slogan">Siêu vé xem phim</p>
+                </div>
+
+                <div class="contact col-md-auto">
+                    <h6 class="footer-heading">Liên hệ chúng tôi</h6>
+                    <div class="contact-list">
+                        <a href="#"><i class="fa-brands fa-facebook face-icon-footer footer-icon"></i> Facebook</a>
+                        <a href="#"><i class="fa-solid fa-envelope email-icon-footer footer-icon"></i> dathungdao2004@gmail.com</a>
+                        <p><i class="fa-solid fa-square-phone phone-icon-footer footer-icon"></i> 0385224919</p>
+                        <p><i class="fa-solid fa-location-dot address-icon-footer footer-icon"></i> CNTT2-K63</p>
+                    </div>
+                </div>
+
+                <div class="service-footer col-md-auto">
+                    <h6 class="footer-heading">Dịch vụ</h6>
+                    <a href="#">Home</a>
+                    <a href="#">Lịch chiếu</a>
+                    <a href="#">Khuyến mãi</a>
+                    <a href="#">Giá</a>
+                    <a href="#">Giới thiệu</a>
+                </div>
+
+                <div class="term-privicy col-md-auto">
+                    <h6 class="footer-heading">Điều khoản và chính sách</h6>
+                    <a href="">Điều khoản</a>
+                    <a href="">Chính sách</a>
+                    <a href="">Câu hỏi thường gặp</a>
+                </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+JiG5C3ZnU4rd7HDWlZqf8zzTlsw3+bB6m8f7Lq5D5MUp8Iw" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="assests/price/js/script.js"></script>
+</body>
+
+</html>
