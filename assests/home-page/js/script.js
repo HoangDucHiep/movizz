@@ -56,7 +56,7 @@ $(document).ready(function () {
         /* pause all video at small width - when slide is img */
         $('.main-slide iframe').each(function () {
             var src = $(this).attr('src');
-            src = src.replace(/autoplay=\d/, 'autoplay=' + autoplayValue);
+            src = src.replace(/autoplay=\d/, 'autoplay=0');
             $(this).attr('src', src);
         });
     }
