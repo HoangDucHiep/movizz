@@ -896,7 +896,7 @@ main .f2D, main .f3D{
     overflow: auto;
 }
 
-main .f2D h3, main .f3D h3 {
+main .f2D h3, main .f3D h3, main .UT h3 {
     font-size: 1.3rem;
 }
 
