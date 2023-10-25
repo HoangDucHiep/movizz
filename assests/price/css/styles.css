@@ -885,6 +885,10 @@ main table{
     overflow-y: scroll;
 }
 
+main table.table {
+    border: 2px solid white;
+}
+
 main .f2D, main .f3D{
     overflow: auto;
 }
@@ -895,7 +899,7 @@ main .f2D h3, main .f3D h3 {
 
 main table, main th, main td{
     border: 2px solid white;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     /* text-align: center; */
 }
 
