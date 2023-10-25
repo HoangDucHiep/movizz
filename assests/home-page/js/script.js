@@ -49,35 +49,35 @@ $(document).ready(function () {
     
     
 
-    /* Video casousel autoplay */
-    let windowWidth = $(window).width();
+    
 
-    if(windowWidth < 800) {
-        /* pause all video at small width - when slide is img */
-        $('.main-slide iframe').each(function () {
-            var src = $(this).attr('src');
-            src = src.replace(/autoplay=\d/, 'autoplay=0');
-            $(this).attr('src', src);
-        });
-    }
-    else {
-        /* autoplay only current slide, pause other slide */
-        $('.main-slide').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 
-            var $currentSlideIframe = $(slick.$slides[currentSlide]).find('iframe');
-            var $nextSlideIframe = $(slick.$slides[nextSlide]).find('iframe');
-
-            $currentSlideIframe.attr('src', function(_, value) {
-                return value.replace('autoplay=1', 'autoplay=0');
+    $(window).on('resize', function() {
+        /* Video casousel autoplay */
+        if($(window).width() < 800) {
+            /* pause all video at small width - when slide is img */
+            $('.main-slide iframe').each(function () {
+                var src = $(this).attr('src');
+                src = src.replace(/autoplay=\d/, 'autoplay=0');
+                $(this).attr('src', src);
             });
-            $nextSlideIframe.attr('src', function(_, value) {
-                return value.replace('autoplay=0', 'autoplay=1');
+        }
+        else {
+            /* autoplay only current slide, pause other slide */
+            $('.main-slide').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+
+                var $currentSlideIframe = $(slick.$slides[currentSlide]).find('iframe');
+                var $nextSlideIframe = $(slick.$slides[nextSlide]).find('iframe');
+
+                $currentSlideIframe.attr('src', function(_, value) {
+                    return value.replace('autoplay=1', 'autoplay=0');
+                });
+                $nextSlideIframe.attr('src', function(_, value) {
+                    return value.replace('autoplay=0', 'autoplay=1');
+                });
             });
-        });
-    }
-
-
-
+        }
+    });
 
 
 
