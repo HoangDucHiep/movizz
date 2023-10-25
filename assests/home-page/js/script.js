@@ -47,19 +47,32 @@ $(document).ready(function () {
 
     
     // Bắt sự kiện afterChange
-    $('.main-slide').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        // Lấy các iframe trong slide hiện tại và slide tiếp theo
-        var $currentSlideIframe = $(slick.$slides[currentSlide]).find('iframe');
-        var $nextSlideIframe = $(slick.$slides[nextSlide]).find('iframe');
 
-        // Thay đổi thuộc tính src để bật/tắt autoplay
-        $currentSlideIframe.attr('src', function(_, value) {
-            return value.replace('autoplay=1', 'autoplay=0');
+    let windowWidth = $(window).width();
+
+    if(windowWidth < 800) {
+        $('.slider iframe').each(function () {
+            var src = $(this).attr('src');
+            src = src.replace(/autoplay=\d/, 'autoplay=' + autoplayValue);
+            $(this).attr('src', src);
         });
-        $nextSlideIframe.attr('src', function(_, value) {
-            return value.replace('autoplay=0', 'autoplay=1');
+    }
+    else {
+        $('.main-slide').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            // Lấy các iframe trong slide hiện tại và slide tiếp theo
+            var $currentSlideIframe = $(slick.$slides[currentSlide]).find('iframe');
+            var $nextSlideIframe = $(slick.$slides[nextSlide]).find('iframe');
+    
+            // Thay đổi thuộc tính src để bật/tắt autoplay
+            $currentSlideIframe.attr('src', function(_, value) {
+                return value.replace('autoplay=1', 'autoplay=0');
+            });
+            $nextSlideIframe.attr('src', function(_, value) {
+                return value.replace('autoplay=0', 'autoplay=1');
+            });
         });
-    });
+    }
+
 
 
 
