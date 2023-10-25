@@ -15,6 +15,17 @@
 }
 
 
+/* tooltips */
+.password-rule > .tooltip-inner {
+    border: 1px solid rgba(255, 255, 255, 0.515);
+    font-size: 0.7rem;
+}
+
+.password-rule .tooltip-arrow {
+    display: none;
+}
+
+
 
 /*universal*/
 * {
