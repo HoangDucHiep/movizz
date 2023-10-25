@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lich chieu</title>
+
+
+    <!-- <--Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="assests/schedule/css/lichchieu.css">
+    <link rel="stylesheet" href="assests/schedule/css/nav.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <!-- nav begin -->
+        <nav>
+            <div class="navbar">
+                <i class='fa-solid fa-bars'></i>
+                <!-- nav logo begin -->
+                <div class="logo-brand"><a href="index.html"><img src="assests/home-page/img/logo/logo.webp" alt="Movizz logo" class="movie-logo"> Movizz</a></div>
+                <!-- nav logo end -->
+
+                <!-- nav menu begin -->
+                <div class="nav-links">
+                    <div class="sidebar-logo-brand">
+                        <span class="logo-brand-name">Movizz</span>
+                        <i class="fa-solid fa-xmark exit-sidebar"></i>
+                    </div>
+                    <ul class="links">
+                        <li>
+                            <a href="#" class="branch">Cụm rạp</a>
+                            <i class="fa-solid fa-chevron-up arrow branch-arrow"></i>
+                            <ul class="branch-sub-menu sub-menu">
+                                <li><a href="#" id="branch1">Ba Đình</a></li>
+                                <li><a href="#" id="branch2">Cầu Giấy</a></li>
+                                <li><a href="#" id="branch3">Thanh Xuân</a></li>
+                                <li class="branch-4" id="branch-4">
+                                    <a href="#">Nguyễn Trãi</a>
+                                    <i class="fa-solid fa-chevron-right arrow branch-4-arrow"></i>
+                                    <ul class="branch-4-sub-menu sub-menu">
+                                        <li><a href="#">Rạp 1</a></li>
+                                        <li><a href="#">Rạp 2</a></li>
+                                        <li><a href="#">Rạp 3</a></li>
+                                        <li><a href="#">Rạp 4</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="schedule.html">Lịch Chiếu</a></li>
+                        <li><a href="sale.html">Khuyến Mãi</a></li>
+                        <li><a href="price.html">Giá</a></li>
+                        <li><a href="about.html">Giới Thiệu</a></li>
+                    </ul>
+                </div>
+                <!-- nav menu end -->
+                
+                <!-- nav most right begin (search, account)-->
+                <div class="nav-right">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <div class="input-box">
+                            <i class="fa-solid fa-magnifying-glass seach-submit"></i>
+                            <input type="text" placeholder="Search here">
+                        </div>
+                    </div>
+        
+                    <div class="account" data-bs-toggle="modal" data-bs-target="#myModal">
+                        <i  class="fa-regular fa-user acount-icon" data-bs-toggle="modal" data-bs-target="#myModal"></i>
+                    </div>
+
+                </div>
+                <!-- nav most right end (search, account)-->
+
+            </div>
+        </nav>
+        <!-- nav end -->
+        
+        <!-- login modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content sign-modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body sign-modal-body">
+                        <div id="login">
+                            <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
+                            <h2 class="login-form-header">Đăng nhập</h2>
+                            <form id="signin-form" action="/">
+                                <fieldset class="email-pass-acc">
+                                    <div class="email-sign">
+                                        <label for="email-sign">Email:</label>
+                                        <div class="input-field email-sign-input-field">
+                                            <i class="fa-regular fa-envelope input-icon"></i>
+                                            <input type="text" id="email-sign" name="email">
+                                            <div class="error"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="password-sign">
+                                    <label for="password-sign">Mật khẩu:</label>
+                                    <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số." data-bs-custom-class="password-rule">
+                                        <i class="fa-solid fa-lock input-icon"></i>
+                                        <input type="password" name="password" id="password-sign">
+                                        <div id="pass-toggle" onclick="showHide();">
+                                            <i class="fa-regular fa-eye show-tog"></i>
+                                            <i class="fa-regular fa-eye-slash hide-tog"></i>
+                                        </div>
+                                        <div class="error"></div>
+                                    </div>
+                                    </div>
+                    
+                                    <div class="remember-and-forget-log">
+                                    <div class="remember-log">
+                                        <input type="checkbox" id="remember" name="remember">
+                                        <label for="remember">Nhớ tôi</label>
+                                    </div>
+                                    <div class="forget-log">
+                                        <a href="#" id="to-reset">Quên mật khẩu?</a>
+                                    </div>
+                                    </div>
+                                    
+                                    <div class="submit">
+                                        <button type="submit" id="login-sub">Đăng nhập</button>
+                                    </div>
+                                    
+                                </fieldset>
+                                
+
+                                <fieldset class="sign-with">
+                                    <p class="sign-with-text">Hoặc đăng nhập bằng</p>
+                                    <div class="other-med">
+                                    <a href="#"><img src="assests/home-page/img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
+                                    <a href="#"><img src="assests/home-page/img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="change-sign-up">
+                                    <a href="#" id="to-sign-up-link">Đăng kí</a>
+                                </fieldset>
+                            </form>
+                        </div>
+
+                        <!-- sign up -->
+                        <div id="signup">
+                            <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
+                            <h2 class="signup-form-header">Đăng kí</h2>
+                            <form action="/" id="signup-form">
+                                <fieldset class="email-pass-acc">
+                                    <div class="email-sign">
+                                        <label for="email-sign-up">Email:</label>
+                                        <div class="input-field email-sign-input-field">
+                                            <i class="fa-regular fa-envelope input-icon"></i>
+                                            <input type="email" id="email-sign-up" name="email-sn">
+                                            <div class="error"></div>
+                                        </div>
+                                    
+                                    </div>
+
+                                    <div class="name-sign">
+                                        <label for="name-sign-up">Họ và tên:</label>
+                                        <div class="input-field name-sign-input-field">
+                                            <i class="fa-regular fa-user input-icon"></i>
+                                            <input type="text" id="name-sign-up" name="name-sn">
+                                            <div class="error"></div>
+                                        </div>
+                                    
+                                    </div>
+
+                                    <div class="phone-sign">
+                                        <label for="phone-sign">Số điện thoại:</label>
+                                        <div class="input-field phone-sign-input-field">
+                                            <i class="fa-solid fa-phone input-icon"></i>
+                                            <input type="text" id="phone-sign-up" name="phone-sn">
+                                            <div class="error"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="password-sign">
+                                        <label for="password-sign-up">Mật khẩu:</label>
+                                        <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số."  data-bs-custom-class="password-rule">
+                                            <i class="fa-solid fa-lock input-icon"></i>
+                                            <input type="password" name="password-sn" id="password-sign-up">
+                                            <div id="pass-toggle-sn" onclick="showHidesn();">
+                                                <i class="fa-regular fa-eye show-tog"></i>
+                                                <i class="fa-regular fa-eye-slash hide-tog"></i>
+                                            </div>
+                                            <div class="error"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="password-sign">
+                                        <label for="password-sign-up-rp">Nhập lại mật khẩu:</label>
+                                        <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số."  data-bs-custom-class="password-rule">
+                                            <i class="fa-solid fa-lock input-icon"></i>
+                                            <input type="password" name="password-sn-rp" id="password-sign-up-rp">
+                                            <div id="pass-toggle-sn-rp" onclick="showHidesnrp();">
+                                                <i class="fa-regular fa-eye show-tog"></i>
+                                                <i class="fa-regular fa-eye-slash hide-tog"></i>
+                                            </div>
+                                            <div class="error"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="submit">
+                                        <button type="submit" id="signup-sub">Đăng kí</button>
+                                    </div>
+                                    
+                                </fieldset>
+                                
+
+                                <fieldset class="sign-with">
+                                    <p class="sign-with-text">Hoặc đăng kí bằng</p>
+                                    <div class="other-med">
+                                    <a href="#"><img src="assests/home-page/img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
+                                    <a href="#"><img src="assests/home-page/img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="change-sign-up">
+                                    <a href="#" id="to-login-link">Đăng nhập</a>
+                                </fieldset>
+                            </form>
+                        </div>
+
+
+                        <!-- forgot pass -->
+                        <div id="reset-pass">
+                            <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
+                            <h2 class="reset-pass-form-header">Quên mật khẩu</h2>
+                            <form id="reset-pass-form" action="/">
+                                <fieldset class="email-pass-acc">
+                                    <p id="reset-pass-guide">Liên kết đặt lại mặt khẩu sẽ được gửi vào email của bạn</p>
+                                    <div class="reset-pass">
+                                        <label for="reset-pass">Email:</label>
+                                        <div class="input-field reset-pass-input-field">
+                                            <i class="fa-regular fa-envelope input-icon"></i>
+                                            <input type="email" id="reset-pass-input" name="email">
+                                            <div class="error"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="submit">
+                                        <button type="submit" id="reset-sub">Gửi email đặt lại mật khẩu</button>
+                                    </div>
+                                    
+                                </fieldset>
+
+                                <fieldset class="change-sign-up">
+                                    <a href="#" id="back-login-link">Trở lại đăng nhập</a>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+
+    
+    <div class="container-anh" style="margin-top:5rem;">
+        
+        <div class="flex-center">
+            <i class="fa-solid fa-compact-disc fa-spin"></i>
+            <h1>Phim đang chiếu</h1>
+        </div>
+        <div class="flex-center button ">
+            <button id="button1" class="selected-button">17-10-2023</button>
+            <button id="button2" >18-10-2023</button>
+            <button id="button3" >19-10-2023</button>
+        </div>
+        <div class="flex-center"><p class="warning"><b>lưu ý:</b>Khán giả dưới 13 tuổi chỉ chọn suất chiếu kết thúc trước 22h và Khán giả dưới 16 tuổi chỉ chọn suất chiếu kết thúc trước 23h.</p> </div>
+        <div class="flex-card-search ">
+            <select class="card-search" id="category-select">
+                <option value="all"><p>Tất cả</p></option>
+                <option value="action"><p>Hành động</p></option>
+                <option value="Science-fiction"><p>khoa học viễn tưởng</p></option>
+            </select>
+        </div>
+        <div id="content-1">
+            <div class=" grid-column " >
+
+                <a class="item flex border" data-category=" Science-fiction" >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/spiderman.webp" alt="spiderman"   style="height: 100%; width: 100%; ">
+                        
+                        <img src="assests/schedule/img/hotago/c-16.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Khoa học viễn tưởng</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 134 phut</p>
+                        </div>
+                        <h4 class="title-movie">Spiderman - No Way home</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T16-Phim được chiếu phổ biến đến người xem đủ 16 tuổi trở lên(16+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+    
+                <a class="item flex border" data-category="    Science-fiction" >
+                    <div class="img_anh relative ">
+                        <img src="assests/schedule/img/movie/ant man.webp" alt="antman"   style="height: 100%; width: 100%; ">
+                        <img src="assests/schedule/img/hotago/hot.png" alt="hot" class="position-absolute-hot">
+                        <img src="assests/schedule/img/hotago/c-16.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                            <p><i class="fa-solid fa-tags"></i> Khoa học viễn tưởng</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 120 phut</p>
+                        </div>
+                        <h4 class="title-movie">Ant Man</h4>
+                        <p>Xuất xứ:Việt Nam </p>
+                        <p>Khởi chiếu : 5/10/2023</p>
+                        <p class="text-node">T16-Phim được chiếu phổ biến đến người xem đủ 16 tuổi trở lên(16+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    18:00
+                                </button>
+                                <button class="button-hour" >
+                                    19:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+    
+                <a class="item flex border" data-category="Science-fiction" >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/avengers.webp" alt="avengers"   style="height: 100%; width: 100%; ">
+                        <img src="assests/schedule/img/hotago/hot.png" alt="hot" class="position-absolute-hot">
+                        <img src="assests/schedule/img/hotago/c-16.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                            <p><i class="fa-solid fa-tags"></i> Khoa học viễn tưởng</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 120 phut</p>
+                        </div>
+                        <h4 class="title-movie">Avengers</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T16-Phim được chiếu phổ biến đến người xem đủ 16 tuổi trở lên(16+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    17:30
+                                </button>
+                                <button class="button-hour" >
+                                    18:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour" >
+                                    21:30
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+    
+                <a class="item flex border" data-category=" teen-drama " >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/collage romance.webp" alt="collage romance"   style="height: 100%; width: 100%; ">
+                        <img src="assests/schedule/img/hotago/hot.png" alt="hot" class="position-absolute-hot">
+                        <img src="assests/schedule/img/hotago/c-13.png" alt="c13" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Học đường</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 130 phut</p>
+                        </div>
+                        <h4 class="title-movie">Collage Romance</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T13-Phim được chiếu phổ biến đến người xem đủ 13 tuổi trở lên(13+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    10:00
+                                </button>
+                                <button class="button-hour">
+                                    15:00
+                                </button>
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    19:00
+                                </button>
+                                <button class="button-hour" >
+                                    22:00
+                                </button>
+                                <button class="button-hour">
+                                    23:30
+                                </button>
+                                
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+    
+                <a class="item flex border" data-category="action" >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/Jurassic world.webp" alt="bietdoidanhthue04"   style="height: 100%; width: 100%; " >
+                        
+                        <img src="assests/schedule/img/hotago/T-18.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Hành động</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 125 phut</p>
+                        </div>
+                        <h4 class="title-movie">Jurassic World</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T18-Phim được chiếu phổ biến đến người xem đủ 18 tuổi trở lên(18+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+
+                <a class="item flex border" data-category="action " >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/money heist.webp" alt="money heist"   style="height: 100%; width: 100%; " >
+                        
+                        <img src="assests/schedule/img/hotago/T-18.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Hành động</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 135 phut</p>
+                        </div>
+                        <h4 class="title-movie">Money Heist</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T18-Phim được chiếu phổ biến đến người xem đủ 18 tuổi trở lên(18+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                        </div>
+                    </div>
+                </a>
+
+                <a class="item flex border" data-category="action " >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/jhon Wick.webp" alt="jhon wick"   style="height: 100%; width: 100%; " >
+                        
+                        <img src="assests/schedule/img/hotago/T-18.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Hành động</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 105 phut</p>
+                        </div>
+                        <h4 class="title-movie">John Wick</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T18-Phim được chiếu phổ biến đến người xem đủ 18 tuổi trở lên(18+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                        </div>
+                    </div>
+                </a>
+
+                <a class="item flex border" data-category="action " >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/the boys.webp" alt="theboys"   style="height: 100%; width: 100%; " >
+                        
+                        <img src="assests/schedule/img/hotago/T-18.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Hành động</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 113 phut</p>
+                        </div>
+                        <h4 class="title-movie">The Boys</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T18-Phim được chiếu phổ biến đến người xem đủ 18 tuổi trở lên(18+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                        </div>
+                    </div>
+                </a>
+
+                <a class="item flex border" data-category="anime Science-fiction" >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/suzume.webp" alt="suzume"   style="height: 100%; width: 100%; ">
+                        <img src="assests/schedule/img/hotago/hot.png" alt="hot" class="position-absolute-hot">
+                        <img src="assests/schedule/img/hotago/c-13.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Anime,Khoa học viễn tưởng</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 100 phut</p>
+                        </div>
+                        <h4 class="title-movie">Khóa chặt Cửa nào suzeme</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T13-Phim được chiếu phổ biến đến người xem đủ 13 tuổi trở lên(13+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    17:00
+                                </button>
+                                <button class="button-hour" >
+                                    18:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+
+                                
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+
+                <a class="item flex border" data-category="Science-fiction" >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/doctorstange.webp" alt="doctorstange"   style="height: 100%; width: 100%; ">
+                  
+                        <img src="assests/schedule/img/hotago/c-16.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Khoa học viễn tưởng</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 120 phut</p>
+                        </div>
+                        <h4 class="title-movie">DOCTOR STRANGE -đa vũ trụ hỗn loạn</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 11/10/2023</p>
+                        <p class="text-node">T18-Phim được chiếu phổ biến đến người xem đủ 18 tuổi trở lên(18+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour" >
+                                    21:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+    
+    
+    
+            </div>
+        </div>
+
+
+
+        <div id="content-2" style="display: none;">
+            <div class=" grid-column " >
+
+                <a class="item flex border" data-category="    Science-fiction" >
+                    <div class="img_anh relative ">
+                        <img src="assests/schedule/img/movie/ant man.webp" alt="antman"   style="height: 100%; width: 100%; ">
+                        <img src="assests/schedule/img/hotago/hot.png" alt="hot" class="position-absolute-hot">
+                        <img src="assests/schedule/img/hotago/c-16.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Khoa học viễn tưởng</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 120 phut</p>
+                        </div>
+                        <h4 class="title-movie">Ant Man</h4>
+                        <p>Xuất xứ:Việt Nam </p>
+                        <p>Khởi chiếu : 5/10/2023</p>
+                        <p class="text-node">T16-Phim được chiếu phổ biến đến người xem đủ 16 tuổi trở lên(16+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    18:00
+                                </button>
+                                <button class="button-hour" >
+                                    19:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+    
+                <a class="item flex border" data-category="Science-fiction" >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/avengers.webp" alt="avengers"   style="height: 100%; width: 100%; ">
+                        <img src="assests/schedule/img/hotago/hot.png" alt="hot" class="position-absolute-hot">
+                        <img src="assests/schedule/img/hotago/c-16.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                            <p><i class="fa-solid fa-tags"></i> Khoa học viễn tưởng</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 120 phut</p>
+                        </div>
+                        <h4 class="title-movie">Avengers</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T16-Phim được chiếu phổ biến đến người xem đủ 16 tuổi trở lên(16+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    17:30
+                                </button>
+                                <button class="button-hour" >
+                                    18:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour" >
+                                    21:30
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+    
+                <a class="item flex border" data-category=" teen-drama " >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/collage romance.webp" alt="collage romance"   style="height: 100%; width: 100%; ">
+                        <img src="assests/schedule/img/hotago/hot.png" alt="hot" class="position-absolute-hot">
+                        <img src="assests/schedule/img/hotago/c-13.png" alt="c13" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Học đường</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 130 phut</p>
+                        </div>
+                        <h4 class="title-movie">Collage Romance</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T13-Phim được chiếu phổ biến đến người xem đủ 13 tuổi trở lên(13+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    10:00
+                                </button>
+                                <button class="button-hour">
+                                    15:00
+                                </button>
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    19:00
+                                </button>
+                                <button class="button-hour" >
+                                    22:00
+                                </button>
+                                <button class="button-hour">
+                                    23:30
+                                </button>
+                                
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+    
+                <a class="item flex border" data-category="action" >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/Jurassic world.webp" alt="bietdoidanhthue04"   style="height: 100%; width: 100%; " >
+                        
+                        <img src="assests/schedule/img/hotago/T-18.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Hành động</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 125 phut</p>
+                        </div>
+                        <h4 class="title-movie">Jurassic World</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T18-Phim được chiếu phổ biến đến người xem đủ 18 tuổi trở lên(18+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+
+                <a class="item flex border" data-category="action " >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/money heist.webp" alt="money heist"   style="height: 100%; width: 100%; " >
+                        
+                        <img src="assests/schedule/img/hotago/T-18.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Hành động</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 135 phut</p>
+                        </div>
+                        <h4 class="title-movie">Money Heist</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T18-Phim được chiếu phổ biến đến người xem đủ 18 tuổi trở lên(18+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                        </div>
+                    </div>
+                </a>
+
+                <a class="item flex border" data-category="action " >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/jhon Wick.webp" alt="jhon wick"   style="height: 100%; width: 100%; " >
+                        
+                        <img src="assests/schedule/img/hotago/T-18.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Hành động</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 105 phut</p>
+                        </div>
+                        <h4 class="title-movie">Jhon Wick</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T18-Phim được chiếu phổ biến đến người xem đủ 18 tuổi trở lên(18+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                        </div>
+                    </div>
+                </a>
+
+                <a class="item flex border" data-category="action " >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/the boys.webp" alt="theboys"   style="height: 100%; width: 100%; " >
+                        
+                        <img src="assests/schedule/img/hotago/T-18.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Hành động</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 113 phut</p>
+                        </div>
+                        <h4 class="title-movie">The Boys</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T18-Phim được chiếu phổ biến đến người xem đủ 18 tuổi trở lên(18+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                        </div>
+                    </div>
+                </a>
+          
+                <a class="item flex border" data-category=" Science-fiction" >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/spiderman.webp" alt="spiderman"   style="height: 100%; width: 100%; ">
+                        
+                        <img src="assests/schedule/img/hotago/c-16.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Khoa học viễn tưởng</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 134 phut</p>
+                        </div>
+                        <h4 class="title-movie">Spiderman-No Wat home</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T16-Phim được chiếu phổ biến đến người xem đủ 16 tuổi trở lên(16+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+
+                <a class="item flex border" data-category="anime Science-fiction" >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/suzume.webp" alt="suzume"   style="height: 100%; width: 100%; ">
+                        <img src="assests/schedule/img/hotago/hot.png" alt="hot" class="position-absolute-hot">
+                        <img src="assests/schedule/img/hotago/c-13.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Anime,Khoa học viễn tưởng</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 100 phut</p>
+                        </div>
+                        <h4 class="title-movie">Khóa chặt Cửa nào suzeme</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T13-Phim được chiếu phổ biến đến người xem đủ 13 tuổi trở lên(13+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    17:00
+                                </button>
+                                <button class="button-hour" >
+                                    18:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+
+                                
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+
+                <a class="item flex border" data-category="Science-fiction" >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/doctorstange.webp" alt="doctorstange"   style="height: 100%; width: 100%; ">
+                  
+                        <img src="assests/schedule/img/hotago/c-16.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Khoa học viễn tưởng</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 120 phut</p>
+                        </div>
+                        <h4 class="title-movie">DOCTOR STRANGE -đa vũ trụ hỗn loạn</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 11/10/2023</p>
+                        <p class="text-node">T18-Phim được chiếu phổ biến đến người xem đủ 18 tuổi trở lên(18+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour" >
+                                    21:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </div>
+                   
+
+            </a>
+        </div>
+
+
+
+        <div id="content-3" style="display: none;">
+            <div class=" grid-column " >
+                              
+                <a class="item flex border" data-category="action " >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/uncharted.webp" alt="uncharted"   style="height: 100%; width: 100%; ">
+                        <img src="assests/schedule/img/hotago/hot.png" alt="hot" class="position-absolute-hot">
+                        <img src="assests/schedule/img/hotago/c-16.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Hành động</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 120 phut</p>
+                        </div>
+                        <h4 class="title-movie">Uncharted</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 11/11/2023</p>
+                        <p class="text-node">T16-Phim được chiếu phổ biến đến người xem đủ 16 tuổi trở lên(16+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour" >
+                                    21:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+    
+                
+
+                <a class="item flex border" data-category="action " >
+                    <div class="img_anh relative ">
+                        <img src="assests/schedule/img/movie/topgun.webp" alt="topgun"   style="height: 100%; width: 100%; ">
+                        <img src="assests/schedule/img/hotago/hot.png" alt="hot" class="position-absolute-hot">
+                        <img src="assests/schedule/img/hotago/T-18.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Hành động</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 140 phut</p>
+                        </div>
+                        <h4 class="title-movie">topgun-Maverick</h4>
+                        <p>Xuất xứ:Việt Nam </p>
+                        <p>Khởi chiếu : 5/10/2023</p>
+                        <p class="text-node">T18-Phim được chiếu phổ biến đến người xem đủ 18 tuổi trở lên(18+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    18:00
+                                </button>
+                                <button class="button-hour" >
+                                    19:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+    
+                <a class="item flex border" data-category="Science-fiction" >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/thor love of thunder.webp" alt="thor"   style="height: 100%; width: 100%; ">
+                        <img src="assests/schedule/img/hotago/hot.png" alt="hot" class="position-absolute-hot">
+                        <img src="assests/schedule/img/hotago/T-18.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                            <p><i class="fa-solid fa-tags"></i> Khoa học viễn tưởng</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 120 phut</p>
+                        </div>
+                        <h4 class="title-movie">Thor Love of Thunder</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 30/10/2023</p>
+                        <p class="text-node">T18-Phim được chiếu phổ biến đến người xem đủ 18 tuổi trở lên(18+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    17:30
+                                </button>
+                                <button class="button-hour" >
+                                    18:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour" >
+                                    21:30
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+    
+    
+                <a class="item flex border" data-category=" Science-fiction" >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/moon knight.webp" alt="moon knight"   style="height: 100%; width: 100%; ">
+                        <img src="assests/schedule/img/hotago/hot.png" alt="hot" class="position-absolute-hot">
+                        <img src="assests/schedule/img/hotago/T-18.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Khoa học viễn tưởng</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 140 phut</p>
+                        </div>
+                        <h4 class="title-movie">Moon Knight</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 30/11/2023</p>
+                        <p class="text-node">T18-Phim được chiếu phổ biến đến người xem đủ 18 tuổi trở lên(18+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    10:00
+                                </button>
+                                <button class="button-hour">
+                                    15:00
+                                </button>
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    19:00
+                                </button>
+                                <button class="button-hour" >
+                                    22:00
+                                </button>
+                                <button class="button-hour">
+                                    23:30
+                                </button>
+                                
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+    
+    
+    
+                <a class="item flex border" data-category="action " >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/kota factory.webp" alt="kota factory"   style="height: 100%; width: 100%; " >
+                        <img src="assests/schedule/img/hotago/hot.png" alt="hot" class="position-absolute-hot">
+                        <img src="assests/schedule/img/hotago/c-16.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                            <p><i class="fa-solid fa-tags"></i> Hành động </p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 140 phut</p>
+                        </div>
+                        <h4 class="title-movie">Kota Factory</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 28/11/2023</p>
+                        <p class="text-node">T16-Phim được chiếu phổ biến đến người xem đủ 16 tuổi trở lên(16+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+
+
+                <a class="item flex border" data-category="Science-fiction" >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/avatar.webp" alt="avatar2"   style="height: 100%; width: 100%; " >
+                        <img src="assests/schedule/img/hotago/hot.png" alt="hot" class="position-absolute-hot">
+                        <img src="assests/schedule/img/hotago/T-18.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Khoa học viễn tưởng</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 140 phut</p>
+                        </div>
+                        <h4 class="title-movie">Avatar 2- Dòng chảy của nước</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/12/2023</p>
+                        <p class="text-node">T18-Phim được chiếu phổ biến đến người xem đủ 18 tuổi trở lên(18+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                        </div>
+                    </div>
+                </a>
+
+                <a class="item flex border" data-category="action " >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/jhon Wick.webp" alt="jhon wick"   style="height: 100%; width: 100%; " >
+                        
+                        <img src="assests/schedule/img/hotago/T-18.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Hành động</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 140 phut</p>
+                        </div>
+                        <h4 class="title-movie">Jhon Wick</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T18-Phim được chiếu phổ biến đến người xem đủ 18 tuổi trở lên(18+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                        </div>
+                    </div>
+                </a>
+
+                <a class="item flex border" data-category="action " >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/the boys.webp" alt="theboys"   style="height: 100%; width: 100%; " >
+                        
+                        <img src="assests/schedule/img/hotago/c-16.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Hành động</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 140 phut</p>
+                        </div>
+                        <h4 class="title-movie">The Boys</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T16-Phim được chiếu phổ biến đến người xem đủ 16 tuổi trở lên(16+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                <button class="button-hour">
+                                    23:00
+                                </button>
+                            </div> 
+                            
+                        </div>
+                    </div>
+                </a>
+
+          
+                <a class="item flex border" data-category=" Science-fiction" >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/spiderman.webp" alt="spiderman"   style="height: 100%; width: 100%; ">
+                        
+                        <img src="assests/schedule/img/hotago/T-18.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Khoa học viễn tưởng</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 140 phut</p>
+                        </div>
+                        <h4 class="title-movie">Spiderman-No Wat home</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T18-Phim được chiếu phổ biến đến người xem đủ 18 tuổi trở lên(18+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+
+                <a class="item flex border" data-category=" anime Science-fiction" >
+                    <div class="img_anh relative " >
+                        <img src="assests/schedule/img/movie/suzume.webp" alt="suzume"   style="height: 100%; width: 100%; ">
+                        
+                        <img src="assests/schedule/img/hotago/c-16.png" alt="T18" class="position-absolute-ago">
+                    </div>
+                    <div class="content-card relative  " >
+                        <div class="position-absolute border p2d3d">2D</div>
+                        <div class="hidden">
+                             <p><i class="fa-solid fa-tags"></i> Anime,Khoa học viễn tưởng</p>
+                            <p><i class="fa-regular fa-clock fa-spin"></i> 140 phut</p>
+                        </div>
+                        <h4 class="title-movie">Khóa chặt Cửa nào suzeme</h4>
+                        <p>Xuất xứ : Việt Nam</p>
+                        <p>Khởi chiếu : 22/10/2023</p>
+                        <p class="text-node">T16-Phim được chiếu phổ biến đến người xem đủ 16 tuổi trở lên(16+)</p>
+                        <div class="showtimes" >
+                            <p>Lịch chiếu</p> 
+                            <div class="button-flex">
+                                <button class="button-hour" >
+                                    16:00
+                                </button>
+                                <button class="button-hour">
+                                    20:00
+                                </button>
+                                
+                            </div> 
+                            
+                       
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="row justify-content-center">
+                <div class="Company col-md-auto">
+                    <div class="footer-logo-brand"><a href="index.html"><img src="assests/home-page/img/logo/logo.webp" alt="Movizz logo" class=" footer-logo"> Movizzz</a></div>
+                    <p class="slogan">Siêu vé xem phim</p>
+                </div>
+
+                <div class="contact col-md-auto">
+                    <h6 class="footer-heading">Liên hệ chúng tôi</h6>
+                    <div class="contact-list">
+                        <a href="#"><i class="fa-brands fa-facebook face-icon-footer footer-icon"></i> Facebook</a>
+                        <a href="#"><i class="fa-solid fa-envelope email-icon-footer footer-icon"></i> dathungdao2004@gmail.com</a>
+                        <p><i class="fa-solid fa-square-phone phone-icon-footer footer-icon"></i> 0385224919</p>
+                        <p><i class="fa-solid fa-location-dot address-icon-footer footer-icon"></i> CNTT2-K63</p>
+                    </div>
+                </div>
+
+                <div class="service-footer col-md-auto">
+                    <h6 class="footer-heading">Dịch vụ</h6>
+                    <a href="index.html">Home</a>
+                    <a href="#">Lịch chiếu</a>
+                    <a href="sale.html">Khuyến mãi</a>
+                    <a href="price.html">Giá</a>
+                    <a href="about.html">Giới thiệu</a>
+                </div>
+
+                <div class="term-privicy col-md-auto">
+                    <h6 class="footer-heading">Điều khoản và chính sách</h6>
+                    <a href="">Điều khoản</a>
+                    <a href="">Chính sách</a>
+                    <a href="">Câu hỏi thường gặp</a>
+                </div>
+        </div>
+    </footer>
+
+
+    <!-- Latest compiled JavaScript   -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assests/schedule/js/javascript.js"></script>
+</body>
+</html>
+
+
+
+

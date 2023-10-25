@@ -1,4 +1,3 @@
-
 /*commonn css*/
 .white-text {
     color: white !important;
@@ -16,6 +15,16 @@
 }
 
 
+/* tooltips */
+.password-rule > .tooltip-inner {
+    border: 1px solid rgba(255, 255, 255, 0.515);
+    font-size: 0.7rem;
+}
+
+.password-rule .tooltip-arrow {
+    display: none;
+}
+
 
 
 /*universal*/
@@ -28,15 +37,8 @@
 
 
 html {
-    width: 100vw;
-    height: 100%;
     font-size: calc(15px + 0.390625vw);
     overflow-x: hidden;
-}
-
-body {
-    width: 100%;
-    height: 100%;
 }
 
 
@@ -54,11 +56,6 @@ nav {
     width: 100vw;
     z-index: 1000;
     
-}
-
-main {
-    padding: 0 1%;
-    margin: 100px 0;
 }
 
 nav .navbar {
@@ -141,7 +138,7 @@ nav .navbar .nav-links .links .arrow {
 nav .navbar .nav-links .links li:hover .branch-arrow{
     transform: rotate(180deg);
 }
-nav .navbar .nav-links .links li.branch-nguyen-trai:hover .branch-nguyen-trai-arrow{
+nav .navbar .nav-links .links li.branch-4:hover .branch-4-arrow{
     transform: rotate(90deg);
 }
 
@@ -175,17 +172,17 @@ nav .navbar .nav-links .links .sub-menu li:hover a{
 }
 
 /* arrow of subnav --------------------------------------------------------*/
-nav .navbar .nav-links .links .sub-menu li .branch-nguyen-trai-arrow {
+nav .navbar .nav-links .links .sub-menu li .branch-4-arrow {
     line-height: 40px;
 }
 
 /* submenu's submenu :)) --------------------------------------------------------*/
 nav .navbar .nav-links .links li:hover .branch-sub-menu,
-nav .navbar .nav-links .links .branch-nguyen-trai:hover .branch-nguyen-trai-sub-menu{
+nav .navbar .nav-links .links .branch-4:hover .branch-4-sub-menu{
     display: block;
 }
 
-nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
+nav .navbar .nav-links .links .branch-4 .branch-4-sub-menu{
     position: absolute;
     top: 0;
     left: 100%;
@@ -366,12 +363,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     .links > li > a::before {
         right: 45%;
     }
-
-}
-
-/* sm nx layout (sidebar)--------------------------------------------------------*/
-@media (max-width: 800px) {
-
+    
     .navbar{
         background-color: var(--nav-bg-sm-layout);
     }
@@ -466,18 +458,18 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 
     /* sidebar submenu's submenu--------------------------------------------------------*/
     nav .navbar .nav-links .links li:hover .branch-sub-menu,
-    nav .navbar .nav-links .links li:hover .sub-menu .branch-nguyen-trai-sub-menu{
+    nav .navbar .nav-links .links li:hover .sub-menu .branch-4-sub-menu{
         display: none;
     }
     
 
-    nav .navbar .nav-links .links li .sub-menu .branch-nguyen-trai-sub-menu{
+    nav .navbar .nav-links .links li .sub-menu .branch-4-sub-menu{
         display: none;
         position: relative;
         left: 0;
     }
 
-    nav .navbar .nav-links .links li .sub-menu .branch-nguyen-trai-sub-menu li{
+    nav .navbar .nav-links .links li .sub-menu .branch-4-sub-menu li{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -486,7 +478,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     nav .navbar .nav-links.show1 .links .sub-menu.branch-sub-menu{
         display: block;
     }
-    nav .navbar .nav-links.show2 .links .branch-nguyen-trai .sub-menu.branch-nguyen-trai-sub-menu{
+    nav .navbar .nav-links.show2 .links .branch-4 .sub-menu.branch-4-sub-menu{
         display: block;
     }
  branch-arrow
@@ -496,19 +488,20 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     }
 
     nav .navbar .nav-links .links li:hover .branch-arrow,
-    nav .navbar .nav-links .links li.branch-nguyen-trai:hover .branch-nguyen-trai-arrow{
+    nav .navbar .nav-links .links li.branch-4:hover .branch-4-arrow{
         transform: rotate(0deg);
     }
 
     nav .navbar .nav-links.show1 .links li:hover .branch-arrow{
         transform: rotate(180deg)
     }
-    nav .navbar .nav-links.show2 .links li.branch-nguyen-trai:hover .branch-nguyen-trai-arrow{
+    nav .navbar .nav-links.show2 .links li.branch-4:hover .branch-4-arrow{
         transform: rotate(90deg);
     }
 
-
 }
+
+
 
 
 /* -------------------------------login-signup ----------------------------------------- */
@@ -526,8 +519,6 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     background-color: transparent;
     position: relative;
 }
-
-
 
 #login,
 #signup,
@@ -861,79 +852,6 @@ label[for="remember"] {
 .input-field.error {
     border-color: #ff3860;
 }
-
-/* main */
-body{
-
-    color: white;
-    background-color: var(--main-bg);
-}
-
-main h1{
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-}
-
-main .giave{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 5px;
-}
-
-main table{
-    text-align: center;
-    table-layout: fixed;
-    width: 100%;  
-    overflow-y: scroll;
-}
-
-main table.table {
-    border: 2px solid white;
-}
-
-main .f2D, main .f3D{
-    overflow: auto;
-}
-
-main .f2D h3, main .f3D h3 {
-    font-size: 1.3rem;
-}
-
-main table, main th, main td{
-    border: 2px solid white;
-    font-size: 0.65rem;
-    /* text-align: center; */
-}
-
-
-/* phones */
-@media (max-width: 576px) {
-    main body {
-        font-size: 7px;
-        }
-    }
-
- @media ( min-width: 576px) and (max-width: 768px) {
-    main body {
-        font-size: 10px;
-        }
-    }
-/* large */
-@media (min-width: 769px) and (max-width: 1200px) {
-    main body {
-        font-size: 18px;
-        }
-    }
-
-@media (min-width: 1201px) {
-    main body {
-        font-size: 20px;
-        }
-    }
-
-    
-
 
 /* Footer */
 footer {
