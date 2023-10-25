@@ -371,11 +371,7 @@ nav .navbar .nav-links .links .branch-4 .branch-4-sub-menu{
     .links > li > a::before {
         right: 45%;
     }
-}
-
-/* sm nx layout (sidebar)--------------------------------------------------------*/
-@media (max-width: 800px) {
-
+    
     .navbar{
         background-color: var(--nav-bg-sm-layout);
     }
