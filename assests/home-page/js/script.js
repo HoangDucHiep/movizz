@@ -54,7 +54,7 @@ $(document).ready(function () {
 
     if(windowWidth < 800) {
         /* pause all video at small width - when slide is img */
-        $('.slider iframe').each(function () {
+        $('.main-slide iframe').each(function () {
             var src = $(this).attr('src');
             src = src.replace(/autoplay=\d/, 'autoplay=' + autoplayValue);
             $(this).attr('src', src);
@@ -94,7 +94,7 @@ $(document).ready(function () {
     }
 
 
-    
+
     $(window).on('resize', function() {
     if ($(window).width() >= 768) 
     {
