@@ -146,7 +146,7 @@ nav .navbar .nav-links .links .arrow {
 nav .navbar .nav-links .links li:hover .branch-arrow{
     transform: rotate(180deg);
 }
-nav .navbar .nav-links .links li.branch-nguyen-trai:hover .branch-nguyen-trai-arrow{
+nav .navbar .nav-links .links li.branch-4:hover .branch-4-arrow{
     transform: rotate(90deg);
 }
 
@@ -180,17 +180,17 @@ nav .navbar .nav-links .links .sub-menu li:hover a{
 }
 
 /* arrow of subnav --------------------------------------------------------*/
-nav .navbar .nav-links .links .sub-menu li .branch-nguyen-trai-arrow {
+nav .navbar .nav-links .links .sub-menu li .branch-4-arrow {
     line-height: 40px;
 }
 
 /* submenu's submenu :)) --------------------------------------------------------*/
 nav .navbar .nav-links .links li:hover .branch-sub-menu,
-nav .navbar .nav-links .links .branch-nguyen-trai:hover .branch-nguyen-trai-sub-menu{
+nav .navbar .nav-links .links .branch-4:hover .branch-4-sub-menu{
     display: block;
 }
 
-nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
+nav .navbar .nav-links .links .branch-4 .branch-4-sub-menu{
     position: absolute;
     top: 0;
     left: 100%;
@@ -470,18 +470,18 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 
     /* sidebar submenu's submenu--------------------------------------------------------*/
     nav .navbar .nav-links .links li:hover .branch-sub-menu,
-    nav .navbar .nav-links .links li:hover .sub-menu .branch-nguyen-trai-sub-menu{
+    nav .navbar .nav-links .links li:hover .sub-menu .branch-4-sub-menu{
         display: none;
     }
     
 
-    nav .navbar .nav-links .links li .sub-menu .branch-nguyen-trai-sub-menu{
+    nav .navbar .nav-links .links li .sub-menu .branch-4-sub-menu{
         display: none;
         position: relative;
         left: 0;
     }
 
-    nav .navbar .nav-links .links li .sub-menu .branch-nguyen-trai-sub-menu li{
+    nav .navbar .nav-links .links li .sub-menu .branch-4-sub-menu li{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -490,7 +490,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     nav .navbar .nav-links.show1 .links .sub-menu.branch-sub-menu{
         display: block;
     }
-    nav .navbar .nav-links.show2 .links .branch-nguyen-trai .sub-menu.branch-nguyen-trai-sub-menu{
+    nav .navbar .nav-links.show2 .links .branch-4 .sub-menu.branch-4-sub-menu{
         display: block;
     }
  branch-arrow
@@ -500,14 +500,14 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     }
 
     nav .navbar .nav-links .links li:hover .branch-arrow,
-    nav .navbar .nav-links .links li.branch-nguyen-trai:hover .branch-nguyen-trai-arrow{
+    nav .navbar .nav-links .links li.branch-4:hover .branch-4-arrow{
         transform: rotate(0deg);
     }
 
     nav .navbar .nav-links.show1 .links li:hover .branch-arrow{
         transform: rotate(180deg)
     }
-    nav .navbar .nav-links.show2 .links li.branch-nguyen-trai:hover .branch-nguyen-trai-arrow{
+    nav .navbar .nav-links.show2 .links li.branch-4:hover .branch-4-arrow{
         transform: rotate(90deg);
     }
 

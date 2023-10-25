@@ -154,7 +154,7 @@ branchArrow.onclick = function() {
     }
 };
 
-let branchNguyenTraiArrow = document.querySelector(".branch-nguyen-trai");
+let branchNguyenTraiArrow = document.querySelector(".branch-4");
 branchNguyenTraiArrow.onclick = function() {
     if (navLinks.classList.contains("show2")) {
         navLinks.classList.remove("show2");
