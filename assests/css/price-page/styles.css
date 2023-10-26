@@ -6,11 +6,22 @@ body{
     background-color: var(--main-bg);
 }
 
-main h1{
+
+
+main {
+    margin-bottom: 6%;
+    padding: 0 5%;
+}
+main h1 {
     color: white;
     text-align: center;
-    font-size: 2rem;
+    margin: 8% 10px 2%;
+    font-size: 1.8rem;
+    font-weight: 540;
+    text-transform: uppercase;
 }
+
+
 
 main .giave{
     max-width: 1200px;
@@ -33,42 +44,41 @@ main .f2D, main .f3D{
     overflow: auto;
 }
 
+main .UT ul li {
+    list-style-type: circle;
+}
+
+main .UT ul li p {
+    font-size: 0.95rem;
+}
+
 main .f2D h3, main .f3D h3, main .UT h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    font-weight: 520;
+    margin-top: 2%;
 }
 
 main table, main th, main td{
     border: 2px solid white;
     font-size: 0.65rem;
+
+    
     /* text-align: center; */
 }
 
 
-/* phones */
-@media (max-width: 576px) {
-    main body {
-        font-size: 7px;
-        }
-    }
 
- @media ( min-width: 576px) and (max-width: 768px) {
-    main body {
-        font-size: 10px;
-        }
-    }
-/* large */
-@media (min-width: 769px) and (max-width: 1200px) {
-    main body {
-        font-size: 18px;
-        }
-    }
+    
+@media (max-width: 768px) {
 
-@media (min-width: 1201px) {
-    main body {
-        font-size: 20px;
-        }
+    main h1 {
+        margin: 30% 10px 8%;
     }
 
     
-
+    main table, main th, main td{
+        font-size: 0.55rem;    
+        text-align: center;
+    }
+}
 

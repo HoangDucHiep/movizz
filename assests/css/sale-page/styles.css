@@ -19,6 +19,7 @@ main h1 {
     margin: 8% 10px 2%;
     font-size: 1.8rem;
     font-weight: 540;
+    text-transform: uppercase;
 }
 main .grid{
     display: grid;
@@ -145,97 +146,6 @@ main .item-km:active a h3{
 } 
 
 
-/* Footer */
-footer {
-    height: fit-content;
-    background-color: #33324260;
-    border-top: 1px solid rgba(255, 255, 255, 0.134);
-    padding: 2%;
-    width: 100vw;
-    color: white;
-    font-size: 0.8rem;
-    font-weight: 300;
-}
-
-.company,
-.contact,
-.term-privicy {
-    width: fit-content;
-}
-
-.footer-logo-brand a{
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 550;
-}
-
-.footer-heading {
-    font-size: 1rem;
-}
-
-.footer-logo-brand .footer-logo{
-    width: 2rem;
-    transition: all 0.2s;
-}
-
-.footer-logo-brand a:hover  {
-    & .footer-logo{
-        transform: rotate(10deg);
-    }
-    
-    color: #b7b7b7;
-}
-
-.Company .slogan{
-    font-style: italic;
-}
-
-
-
-.contact-list a,
-.contact-list p,
-.service-footer a,
-.term-privicy a{
-    color: white;
-    text-decoration: none;
-    margin: 0;
-}
-
-.footer-icon {
-    transition: all 0.2s;
-}
-
-.contact-list a:hover {
-    color: #a5a5a5;
-
-    & i {
-        font-size: 0.9rem;
-    }
-}
-
-.service-footer a:hover,
-.term-privicy a:hover {
-    color: #a5a5a5;
-}
-
-
-.contact-list,
-.service-footer,
-.term-privicy {
-    display: flex;
-    flex-direction: column;
-}
-
-
-@media (min-width: 768px) {
-    .contact,
-    .service-footer {
-        border-left: 1px solid rgba(255, 255, 255, 0.467);
-        border-right: 1px solid rgba(255, 255, 255, 0.467);
-    }
-
-}
 
 
 @media (max-width: 768px) {
@@ -244,17 +154,4 @@ footer {
         margin: 30% 10px 8%;
     }
 
-    .contact {
-        padding: 1% 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.467);
-    }
-
-    .term-privicy {
-        padding: 1% 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.467);
-    }
-    
-    footer {
-        text-align: center;
-    }
 }

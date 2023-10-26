@@ -1,9 +1,54 @@
+/*commonn css*/
+.white-text {
+    color: white !important;
+}
+
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
 /* color vari, and.... */
 :root {
     --nav-bg-lg-layout: rgba(0 ,0 ,0 , 0.7);
     --nav-bg-sm-layout: rgba(0 ,0 ,0 , 0.8);
     --main-bg: rgb(6, 0, 12);
 }
+
+
+/* tooltips */
+.password-rule > .tooltip-inner {
+    border: 1px solid rgba(255, 255, 255, 0.515);
+    font-size: 0.7rem;
+}
+
+.password-rule .tooltip-arrow {
+    display: none;
+}
+
+
+
+/*universal*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+html {
+    width: 100vw;
+    height: 100%;
+    font-size: calc(15px + 0.390625vw);
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--main-bg);
+    width: 100%;
+    height: 100%;
+}
+
 
 /* Large layout navbar*/
 
@@ -84,6 +129,13 @@ nav .navbar .nav-links .links li a {
 }
 
 
+nav .navbar .nav-links .links li:active > a {
+    color: #b07ccc;
+}
+
+
+
+
 
 /* Arrow of menu --------------------------------------------------------*/
 nav .navbar .nav-links .links li .arrow {
@@ -104,6 +156,7 @@ nav .navbar .nav-links .links li:hover .branch-arrow{
 nav .navbar .nav-links .links li.branch-4:hover .branch-4-arrow{
     transform: rotate(90deg);
 }
+
 
 /* subnav - submenu --------------------------------------------------------*/
 nav .navbar .nav-links .links .sub-menu {
@@ -133,6 +186,7 @@ nav .navbar .nav-links .links .sub-menu li a{
 nav .navbar .nav-links .links .sub-menu li:hover a{
     font-size: 0.8rem;
 }
+
 
 /* arrow of subnav --------------------------------------------------------*/
 nav .navbar .nav-links .links .sub-menu li .branch-4-arrow {
@@ -310,6 +364,7 @@ nav .navbar .nav-links .links .branch-4 .branch-4-sub-menu{
     .links li:hover a::before{
         transform: scale(1);
     }
+
 }
 
 
@@ -463,6 +518,10 @@ nav .navbar .nav-links .links .branch-4 .branch-4-sub-menu{
     }
 
 }
+
+
+
+
 
 /* -------------------------------login-signup ----------------------------------------- */
 
@@ -855,6 +914,10 @@ footer {
     color: #b7b7b7;
 }
 
+.footer-logo-brand a:active{    
+    color: #b07ccc;
+}
+
 .Company .slogan{
     font-style: italic;
 }
@@ -882,9 +945,18 @@ footer {
     }
 }
 
+.contact-list a:active {
+    color: #b07ccc;
+}
+
 .service-footer a:hover,
 .term-privicy a:hover {
     color: #a5a5a5;
+}
+
+.service-footer a:active,
+.term-privicy a:active {
+    color: #b07ccc;
 }
 
 

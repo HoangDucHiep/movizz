@@ -129,6 +129,13 @@ nav .navbar .nav-links .links li a {
 }
 
 
+nav .navbar .nav-links .links li:active > a {
+    color: #b07ccc;
+}
+
+
+
+
 
 /* Arrow of menu --------------------------------------------------------*/
 nav .navbar .nav-links .links li .arrow {
@@ -149,6 +156,7 @@ nav .navbar .nav-links .links li:hover .branch-arrow{
 nav .navbar .nav-links .links li.branch-4:hover .branch-4-arrow{
     transform: rotate(90deg);
 }
+
 
 /* subnav - submenu --------------------------------------------------------*/
 nav .navbar .nav-links .links .sub-menu {
@@ -178,6 +186,7 @@ nav .navbar .nav-links .links .sub-menu li a{
 nav .navbar .nav-links .links .sub-menu li:hover a{
     font-size: 0.8rem;
 }
+
 
 /* arrow of subnav --------------------------------------------------------*/
 nav .navbar .nav-links .links .sub-menu li .branch-4-arrow {
@@ -355,6 +364,7 @@ nav .navbar .nav-links .links .branch-4 .branch-4-sub-menu{
     .links li:hover a::before{
         transform: scale(1);
     }
+
 }
 
 
@@ -942,6 +952,10 @@ nav .navbar .nav-links .links .branch-4 .branch-4-sub-menu{
     color: #ffffff;
 }
 
+.main .movie-list  .movie-card .card .movie-item:active .movie-name{
+    color: #b07ccc;
+}
+
 .main .movie-list  .movie-card .card a .movie-rating{
     font-size: 0.8rem;
 }
@@ -1384,6 +1398,10 @@ footer {
     color: #b7b7b7;
 }
 
+.footer-logo-brand a:active{    
+    color: #b07ccc;
+}
+
 .Company .slogan{
     font-style: italic;
 }
@@ -1411,9 +1429,18 @@ footer {
     }
 }
 
+.contact-list a:active {
+    color: #b07ccc;
+}
+
 .service-footer a:hover,
 .term-privicy a:hover {
     color: #a5a5a5;
+}
+
+.service-footer a:active,
+.term-privicy a:active {
+    color: #b07ccc;
 }
 
 

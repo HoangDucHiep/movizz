@@ -10,17 +10,24 @@ body{
     width: 90vw;
 }
 
-.container-anh p, .container-anhh4{
+.container-anh p, .container-anh h4{
     margin: 0;
     line-height: 1.2rem;
 }
 .container-anh h1{
-    font-size: 2;
+    font-size: 1.8rem;
+    font-weight: 540;
+    text-transform: uppercase;
+}
+
+.container-anh h1 .fa-compact-disc {
+    font-size: 1.8rem;
 }
 
 .container-anh p.warning {
     font-size: 1rem;
-    font-weight: 520;
+    font-weight: 500;
+    text-align: center;
 }
 
 .container-anh{
@@ -39,13 +46,17 @@ body{
 
 .container-anh .item:hover {
     & .title-movie {
-        color: #9c9c9c;
+        color: #ffffff;
     }
 
     
     & .img_anh img{
         transform: scale(1.1);
     }
+}
+
+.container-anh .item:active .title-movie {
+        color: #b07ccc;
 }
 
 .container-anh .button button{
@@ -78,7 +89,7 @@ body{
     justify-content: start;
     background-color:rgb(6, 0, 12);
     height: 2rem;
-    width: 10rem;
+    width: rem;
     border-radius: 1rem;
     letter-spacing: 1px;
     padding: 0 0.5rem;
@@ -218,16 +229,18 @@ body{
     font-size: 0.7rem;
 }
 
-.container-anh .title-movie{
+.container-anh .item .title-movie{
     text-transform: uppercase;
     margin: 0.5rem 0  ;
     font-size: 1.2rem;
     font-weight:bold;
     padding-right: 2rem;
+    color: #cdcdcd;
 }
 
 .container-anh .content-card p {
     font-size: 0.8rem;
+    color: #cdcdcd;
 }
 
 
