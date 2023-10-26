@@ -1,3 +1,10 @@
+/* color vari, and.... */
+:root {
+    --nav-bg-lg-layout: rgba(0 ,0 ,0 , 0.7);
+    --nav-bg-sm-layout: rgba(0 ,0 ,0 , 0.8);
+    --main-bg: rgb(6, 0, 12);
+}
+
 /* Large layout navbar*/
 
 /* navbar --------------------------------------------------------*/
