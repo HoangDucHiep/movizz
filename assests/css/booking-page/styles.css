@@ -343,7 +343,7 @@ body{
 }
 
 .section1{
-    margin: 0 auto 2%;
+    margin: 0 auto 5%;
     background: linear-gradient(rgba(0, 0, 0, 0.944), rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.911));
     position: relative;
     top: 70px;
