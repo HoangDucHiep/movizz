@@ -278,7 +278,7 @@ body{
     
 }
     @media (min-width: 576px){
-    .container-anh .container-anh {
+    .container-anh {
         max-width: 85%;
         margin: 0 auto;
         padding: 0 0 5% 0;
@@ -297,7 +297,7 @@ body{
 }
 @media (min-width: 780px) {
 
-    .container-anh .container-anh {
+    .container-anh {
         max-width: 90%;
         margin: 0 auto;
         padding: 0 0 8% 0;
@@ -305,15 +305,15 @@ body{
 
     .container-anh .grid-column{
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
         gap:1rem;
 
     } 
     .container-anh.hidden {
         display: flex;
-    }
+     }
 
-    } 
+  } 
     @media (min-width: 1280px) {
 
     .container-anh {
@@ -324,11 +324,12 @@ body{
 
     .container-anh .grid-column{
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
         gap:1rem;
     }
 
     .container-anh .hidden {
         display: flex;
-    }
-} 
+     }
+     
+  } 

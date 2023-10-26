@@ -1,3 +1,4 @@
+         
 document.getElementById("button1").classList.add("selected-button");
 
 document.getElementById("button1").addEventListener("click",
@@ -35,32 +36,23 @@ document.getElementById("button3").addEventListener("click",
     });
 
 
-
-
 // Hàm ẩn tất cả các nội dung
 function hideAllContent() {
     document.getElementById("content-1").style.display = "none";
     document.getElementById("content-2").style.display = "none";
     document.getElementById("content-3").style.display = "none";
 }
-// Lắng nghe sự kiện khi thay đổi thể loại
+
+//select
 document.getElementById("category-select").addEventListener("change", function () {
     const selectedCategory = this.value;
-
-    // Lặp qua tất cả các phim và kiểm tra thể loại
     const movies = document.querySelectorAll(".item");
-   
     movies.forEach((movie) => {
         const movieCategory = movie.getAttribute("data-category");
-
-        // Kiểm tra xem thể loại phim có trùng khớp với thể loại đã chọn hoặc có thể loại "action comedy" không
-        if (selectedCategory === "all" || movieCategory.includes(selectedCategory) || (selectedCategory === "comedy" && movieCategory === "action comedy")) {
-            // Hiển thị phim nếu trùng khớp
+        if (selectedCategory === "all" || movieCategory.includes(selectedCategory)) {
             movie.style.display = "flex";
         } else {
-            // Ẩn phim nếu không trùng khớp
             movie.style.display = "none";
         }
     });
-    
 });
