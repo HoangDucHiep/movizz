@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web ban ve xem phim - bai tap lon - cntt2 - utc">  <!-- seo stuff!! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat booking</title>
+    <link rel="icon" type="image/x-icon" href="assests/movie/img/logo/logo.webp">
+    
+    <!-- import incon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- bootstrap & css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- My css -->
+    <link rel="stylesheet" href="assests/movie/css/film_book.css">
+    <link rel="stylesheet" href="assests/home-page/css/styles.css">
+
+<body class="text-light"> 
+
+        <header>
+            <!-- nav begin -->
+            <nav>
+                <div class="navbar">
+                    <i class='fa-solid fa-bars'></i>
+                    <!-- nav logo begin -->
+                    <div class="logo-brand"><a href="index.html"><img src="assests/movie/img/logo/logo.webp" alt="Movizz logo" class="movie-logo"> Movizz</a></div>
+                    <!-- nav logo end -->
+
+                    <!-- nav menu begin -->
+                    <div class="nav-links">
+                        <div class="sidebar-logo-brand">
+                            <span class="logo-brand-name">Movizz</span>
+                            <i class="fa-solid fa-xmark exit-sidebar"></i>
+                        </div>
+                        <ul class="links">
+                            <li>
+                                <a href="#" class="branch">Cụm rạp</a>
+                                <i class="fa-solid fa-chevron-up arrow branch-arrow"></i>
+                                <ul class="branch-sub-menu sub-menu">
+                                    <li><a href="#" id="branch1">Ba Đình</a></li>
+                                    <li><a href="#" id="branch2">Cầu Giấy</a></li>
+                                    <li><a href="#" id="branch3">Thanh Xuân</a></li>
+                                    <li class="branch-4" id="branch-4">
+                                        <a href="#">Nguyễn Trãi</a>
+                                        <i class="fa-solid fa-chevron-right arrow branch-4-arrow"></i>
+                                        <ul class="branch-4-sub-menu sub-menu">
+                                            <li><a href="#">Rạp 1</a></li>
+                                            <li><a href="#">Rạp 2</a></li>
+                                            <li><a href="#">Rạp 3</a></li>
+                                            <li><a href="#">Rạp 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="schedule.html">Lịch Chiếu</a></li>
+                            <li><a href="sale.html">Khuyến Mãi</a></li>
+                            <li><a href="price.html">Giá</a></li>
+                            <li><a href="about.html">Giới Thiệu</a></li>
+                        </ul>
+                    </div>
+                    <!-- nav menu end -->
+                    
+                    <!-- nav most right begin (search, account)-->
+                    <div class="nav-right">
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <div class="input-box">
+                                <i class="fa-solid fa-magnifying-glass seach-submit"></i>
+                                <input type="text" placeholder="Search here">
+                            </div>
+                        </div>
+            
+                        <div class="account" data-bs-toggle="modal" data-bs-target="#myModal">
+                            <i  class="fa-regular fa-user acount-icon" data-bs-toggle="modal" data-bs-target="#myModal"></i>
+                        </div>
+
+                    </div>
+                    <!-- nav most right end (search, account)-->
+
+                </div>
+            </nav>
+            <!-- nav end -->
+            
+            <!-- login modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content sign-modal-content">
+
+                        <!-- Modal body -->
+                        <div class="modal-body sign-modal-body">
+                            <div id="login">
+                                <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
+                                <h2 class="login-form-header">Đăng nhập</h2>
+                                <form id="signin-form" action="/">
+                                    <fieldset class="email-pass-acc">
+                                        <div class="email-sign">
+                                            <label for="email-sign">Email:</label>
+                                            <div class="input-field email-sign-input-field">
+                                                <i class="fa-regular fa-envelope input-icon"></i>
+                                                <input type="text" id="email-sign" name="email">
+                                                <div class="error"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="password-sign">
+                                        <label for="password-sign">Mật khẩu:</label>
+                                        <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số." data-bs-custom-class="password-rule">
+                                            <i class="fa-solid fa-lock input-icon"></i>
+                                            <input type="password" name="password" id="password-sign">
+                                            <div id="pass-toggle" onclick="showHide();">
+                                                <i class="fa-regular fa-eye show-tog"></i>
+                                                <i class="fa-regular fa-eye-slash hide-tog"></i>
+                                            </div>
+                                            <div class="error"></div>
+                                        </div>
+                                        </div>
+                        
+                                        <div class="remember-and-forget-log">
+                                        <div class="remember-log">
+                                            <input type="checkbox" id="remember" name="remember">
+                                            <label for="remember">Nhớ tôi</label>
+                                        </div>
+                                        <div class="forget-log">
+                                            <a href="#" id="to-reset">Quên mật khẩu?</a>
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="submit">
+                                            <button type="submit" id="login-sub">Đăng nhập</button>
+                                        </div>
+                                        
+                                    </fieldset>
+                                    
+
+                                    <fieldset class="sign-with">
+                                        <p class="sign-with-text">Hoặc đăng nhập bằng</p>
+                                        <div class="other-med">
+                                        <a href="#"><img src="assests/movie/img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
+                                        <a href="#"><img src="assests/movie/img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset class="change-sign-up">
+                                        <a href="#" id="to-sign-up-link">Đăng kí</a>
+                                    </fieldset>
+                                </form>
+                            </div>
+
+                            <!-- sign up -->
+                            <div id="signup">
+                                <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
+                                <h2 class="signup-form-header">Đăng kí</h2>
+                                <form action="/" id="signup-form">
+                                    <fieldset class="email-pass-acc">
+                                        <div class="email-sign">
+                                            <label for="email-sign-up">Email:</label>
+                                            <div class="input-field email-sign-input-field">
+                                                <i class="fa-regular fa-envelope input-icon"></i>
+                                                <input type="email" id="email-sign-up" name="email-sn">
+                                                <div class="error"></div>
+                                            </div>
+                                        
+                                        </div>
+
+                                        <div class="name-sign">
+                                            <label for="name-sign-up">Họ và tên:</label>
+                                            <div class="input-field name-sign-input-field">
+                                                <i class="fa-regular fa-user input-icon"></i>
+                                                <input type="text" id="name-sign-up" name="name-sn">
+                                                <div class="error"></div>
+                                            </div>
+                                        
+                                        </div>
+
+                                        <div class="phone-sign">
+                                            <label for="phone-sign">Số điện thoại:</label>
+                                            <div class="input-field phone-sign-input-field">
+                                                <i class="fa-solid fa-phone input-icon"></i>
+                                                <input type="text" id="phone-sign-up" name="phone-sn">
+                                                <div class="error"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="password-sign">
+                                            <label for="password-sign-up">Mật khẩu:</label>
+                                            <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số."  data-bs-custom-class="password-rule">
+                                                <i class="fa-solid fa-lock input-icon"></i>
+                                                <input type="password" name="password-sn" id="password-sign-up">
+                                                <div id="pass-toggle-sn" onclick="showHidesn();">
+                                                    <i class="fa-regular fa-eye show-tog"></i>
+                                                    <i class="fa-regular fa-eye-slash hide-tog"></i>
+                                                </div>
+                                                <div class="error"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="password-sign">
+                                            <label for="password-sign-up-rp">Nhập lại mật khẩu:</label>
+                                            <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số."  data-bs-custom-class="password-rule">
+                                                <i class="fa-solid fa-lock input-icon"></i>
+                                                <input type="password" name="password-sn-rp" id="password-sign-up-rp">
+                                                <div id="pass-toggle-sn-rp" onclick="showHidesnrp();">
+                                                    <i class="fa-regular fa-eye show-tog"></i>
+                                                    <i class="fa-regular fa-eye-slash hide-tog"></i>
+                                                </div>
+                                                <div class="error"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="submit">
+                                            <button type="submit" id="signup-sub">Đăng kí</button>
+                                        </div>
+                                        
+                                    </fieldset>
+                                    
+
+                                    <fieldset class="sign-with">
+                                        <p class="sign-with-text">Hoặc đăng kí bằng</p>
+                                        <div class="other-med">
+                                        <a href="#"><img src="assests/movie/img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
+                                        <a href="#"><img src="assests/movie/img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset class="change-sign-up">
+                                        <a href="#" id="to-login-link">Đăng nhập</a>
+                                    </fieldset>
+                                </form>
+                            </div>
+
+
+                            <!-- forgot pass -->
+                            <div id="reset-pass">
+                                <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
+                                <h2 class="reset-pass-form-header">Quên mật khẩu</h2>
+                                <form id="reset-pass-form" action="/">
+                                    <fieldset class="email-pass-acc">
+                                        <p id="reset-pass-guide">Liên kết đặt lại mặt khẩu sẽ được gửi vào email của bạn</p>
+                                        <div class="reset-pass">
+                                            <label for="reset-pass">Email:</label>
+                                            <div class="input-field reset-pass-input-field">
+                                                <i class="fa-regular fa-envelope input-icon"></i>
+                                                <input type="email" id="reset-pass-input" name="email">
+                                                <div class="error"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="submit">
+                                            <button type="submit" id="reset-sub">Gửi email đặt lại mật khẩu</button>
+                                        </div>
+                                        
+                                    </fieldset>
+
+                                    <fieldset class="change-sign-up">
+                                        <a href="#" id="back-login-link">Trở lại đăng nhập</a>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </header>
+
+
+        <!-- MAIN -->
+        <section>
+            <div class="contaier section1">
+                <div class="row w-100 movie_information">
+                    <div class="col-md-4  col-12 movie_img">
+                        <img src="assests/movies/img/movie/spiderman.webp" class="film_img w-100 mt-1" alt="">
+                    </div>
+                    <div class="col-md-8 col-12 introduce">
+                        <h3 class="film_name mt-3">Spider-Man: No Way Home</h3>
+                        <br>
+                        <p><b>Thể loại: </b>Hành động, Phiêu lưu, Viễn tưởng, Siêu anh hùng</p>
+                        <p><b>Khởi chiếu: </b>01/09/2022</p>
+                        <p><b>Thời lượng: </b>148 phút</p>
+                        <p><b>Ngôn ngữ: </b>Tiếng Anh - Phụ đề Tiếng Việt</p>
+                        <p class="text-danger notice"><b>Khuyến cáo: </b>T18 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 18 TUỔI TRỞ LÊN (18+)</p>
+                        <div class="more_infomation">
+                            <p class="p-1" data-bs-toggle="modal" data-bs-target="#myModal-ndchitiet"><i><a href="#" class="text-light clickxemnd" >Nội dung chi tiết</a></i></p>
+                            <button stype="button" class="btn btn-outline-success p-1 watch_trailer" data-bs-toggle="modal" data-bs-target="#myModal1">Trailer</button>
+                        </div>                  
+                    </div>
+                </div>
+            </div>
+
+    <!-- MODAL -->
+            <div class="modal fade " id="myModal-ndchitiet">
+                <div class="modal-dialog">
+                    <div class="modal-content  mymodal">
+                        <div class="modal-header">
+                            <h4 class="modal-title text-light">Spider-Man: No Way Home</h4>
+                            <button type="button" class="btn-close text-light" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-light">
+                            <h3>Nội dung</h3>
+                            <p>Phần 3: Nhện Nhọ không có đường về nhà! Peter Parker đã bị lộ mặt và không còn có thể tách biệt cuộc sống bình thường của mình với những yêu cầu cao của việc trở thành một Siêu anh hùng. Khi anh ta yêu cầu sự giúp đỡ từ Doctor Strange, mọi thứ càng trở nên nguy hiểm hơn, buộc anh ta phải khám phá ra ý nghĩa thực sự của việc trở thành Người Nhện.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger bg-light text-black" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade text-light " id="myModal1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content mymodal">
+                        <div class="modal-header text_modal_header">
+                            <h4 class="modal-title text-light "><b>Trailer</b></h4>
+                            <button type="button" class="btn-close text-light" data-bs-dismiss="modal" id="trailer"></button>
+                        </div>
+                        <div class="modal-body" >
+                            <iframe class="w-100 mytrailer" id="closetrailer" src="https://www.youtube.com/embed/JfVOs4VSpmA?si=hFrLzYO7cUCiPCtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger bg-light text-black" data-bs-dismiss="modal" id="trailer2">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- END MODAL -->
+        </section>
+
+        <section>
+            <div class="container-fluid mt-3">
+                <br>
+    <!-- Nav tabs -->
+                <ul class="nav nav-tabs tab_date_list select_date" role="tablist">
+                    <li class="nav-item ">
+                        <a class="nav-link active mytab tap_date" data-bs-toggle="tab" href="#home00">09/10</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link mytab tap_date" data-bs-toggle="tab" href="#menu01">10/10</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link mytab tap_date" data-bs-toggle="tab" href="#menu02">11/10</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link mytab tap_date" data-bs-toggle="tab" href="#menu03">12/10</a>
+                    </li>
+                </ul>
+
+    <!-- Tab  -->
+                <div class="tab-content">
+                    <div id="home00" class="container tab-pane active"><br>    
+                        <div class="container w-100 w-md-50 " >
+                            <div class="row section2">
+                                <button class="btn btn-primary time col-2 btn-tab select_time " stype="button" >11:00</button>
+                                <button class="btn btn-primary time col-2 btn-tab select_time " stype="button" >12:00</button>
+                                <button class="btn btn-primary time col-2 btn-tab select_time " stype="button" >13:00</button>
+                                <button class="btn btn-primary time col-2 btn-tab select_time " stype="button" >14:00</button>
+                                <button class="btn btn-primary time col-2 btn-tab select_time " stype="button" >15:00</button>
+                                <button class="btn btn-primary time col-2 btn-tab select_time " stype="button" >16:00</button>
+                                <button class="btn btn-primary time col-2 btn-tab select_time " stype="button" >17:00</button>
+                                <button class="btn btn-primary time col-2 btn-tab select_time " stype="button" >18:00</button>
+                            </div>      
+                        </div>
+                    </div>
+
+                    <div id="menu01" class="container tab-pane fade"><br>
+                        <div class="container w-100 w-md-50 " >
+                            <div class="row section2">
+                                <button class="btn btn-primary time col-2 btn-tab select_time" stype="button" >11:00</button>
+                                <button class="btn btn-primary time col-2 btn-tab select_time" stype="button" >12:00</button>
+                                <button class="btn btn-primary time col-2 btn-tab select_time" stype="button" >13:00</button>
+                                <button class="btn btn-primary time col-2 btn-tab select_time" stype="button" >14:00</button>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div id="menu02" class="container tab-pane fade"><br>
+                        <div class="container w-100 w-md-50 " >
+                            <div class="row section2">
+                                <button class="btn btn-primary time col-2 btn-tab select_time" stype="button" >11:00</button>
+                            </div>      
+                        </div>
+                    </div>  
+
+                    <div id="menu03" class="container tab-pane fade"><br>
+                        <div class="container w-100 w-md-50 " >
+                            <div class="row section2">
+                                <button class="btn btn-primary time col-2 btn-tab select_time" stype="button" >11:00</button>
+                                <button class="btn btn-primary time col-2 btn-tab select_time" stype="button" >12:00</button>
+                                <button class="btn btn-primary time col-2 btn-tab select_time" stype="button" >13:00</button>
+                                <button class="btn btn-primary time col-2 btn-tab select_time" stype="button" >14:00</button>
+                                <button class="btn btn-primary time col-2 btn-tab select_time" stype="button" >15:00</button>
+                            </div>      
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!-- END TAP -->
+        </section>
+
+        <section>
+            <div class="container-fluid ">
+                <div class=" section4">
+                    <p class="text-center mt-4 p-5 text-light"><b>Luu y: </b>Khán giả dưới 13 tuổi chỉ chọn suất chiếu kết thúc trước 22h và Khán giả dưới 16 tuổi chỉ chọn suất chiếu kết thúc trước 23h.</p>
+                </div>
+            </div>
+        </section>
+
+    <div class="container-fluid book ">   
+        <!-- Ảnh màn hình và phòng chiếu -->
+                <div class="container-fluid book_screen text-center">               
+                    <div class="text-center">
+                        <img src="assests/movies/img/movie/screen.png" alt="screen_image">
+                    </div>          
+                    <h3>Phòng chiếu số 3</h3>                     
+                </div> 
+        <!-- Đặt ghế -->
+                <div class="seats">
+                    <div class="seat_item d-flex justify-content-center">
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>A1</p></button>
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>A2</p></button>
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>A3</p></button>             
+                        <button type="button" class="btn btn-cus btn-secondary disabled btn-payment"><p>A4</p></button>             
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>A5</p></button>             
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>A6</p></button>            
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>A7</p></button>           
+                        <button type="button" class="btn btn-cus btn-secondary disabled btn-payment"><p>A8</p></button>           
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>A9</p></button>           
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>A10</p></button>            
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>A11</p></button>              
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>A12</p></button>              
+                    </div> 
+                    <div class="seat_item d-flex justify-content-center">
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>B1</p></button>
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>B2</p></button>
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>B3</p></button>             
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>B4</p></button>             
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>B5</p></button>             
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>B6</p></button>            
+                        <button type="button" class="btn btn-cus btn-secondary disabled btn-payment"><p>B7</p></button>           
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>B8</p></button>           
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>B9</p></button>           
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>B10</p></button>            
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>B11</p></button>              
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>B12</p></button>              
+                    </div>
+                    <div class="seat_item d-flex justify-content-center">
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>C1</p></button>
+                        <button type="button" class="btn  btn-cus btn-success btn-payment"><p>C2</p></button>
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>C3</p></button>             
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>C4</p></button>             
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>C5</p></button>             
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>C6</p></button>            
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>C7</p></button>           
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>C8</p></button>           
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>C9</p></button>           
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>C10</p></button>                        
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>C11</p></button>              
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>C12</p></button> 
+                    </div>
+                    <div class="seat_item d-flex justify-content-center">
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>D1</p></button>
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>D2</p></button>
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>D3</p></button>             
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>D4</p></button>             
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>D5</p></button>             
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>D6</p></button>            
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>D7</p></button>           
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>D8</p></button>           
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>D9</p></button>           
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>D10</p></button>         
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>D11</p></button>              
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>D12</p></button>
+                    </div>
+                    <div class="seat_item d-flex justify-content-center">
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>E1</p></button>
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>E2</p></button>
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>E3</p></button>             
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>E4</p></button>             
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>E5</p></button>             
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>E6</p></button>            
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>E7</p></button>           
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>E8</p></button>           
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>E9</p></button>           
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>E10</p></button>          
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>E11</p></button>              
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>E12</p></button>
+                    </div>
+                    <div class="seat_item d-flex justify-content-center">
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>F1</p></button>
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>F2</p></button>
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>F3</p></button>             
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>F4</p></button>             
+                        <button type="button" class="btn btn-cus btn-secondary disabled btn-payment"><p>F5</p></button>             
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>F6</p></button>            
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>F7</p></button>           
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>F8</p></button>           
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>F9</p></button>           
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>F10</p></button>           
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>F11</p></button>              
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>F12</p></button>
+                    </div>
+                    <div class="seat_item d-flex justify-content-center">
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>G1</p></button>
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>G2</p></button>
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>G3</p></button>             
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>G4</p></button>             
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>G5</p></button>             
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>G6</p></button>            
+                        <button type="button" class="btn btn-cus btn-secondary disabled btn-payment"><p>G7</p></button>           
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>G8</p></button>           
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>G9</p></button>           
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>G10</p></button>       
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>G11</p></button>              
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>G12</p></button>
+                    </div>
+                    <div class="seat_item d-flex justify-content-center">
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>H1</p></button>
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>H2</p></button>
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>H3</p></button>             
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>H4</p></button>             
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>H5</p></button>             
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>H6</p></button>            
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>H7</p></button>           
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>H8</p></button>           
+                        <button type="button" class="btn btn-cus btn-secondary disabled btn-payment"><p>H9</p></button>           
+                        <button type="button" class="btn btn-cus btn-warning btn-payment"><p>H10</p></button>       
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>H11</p></button>              
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>H12</p></button>
+                    </div>
+                    <div class="seat_item d-flex justify-content-center">
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>I1</p></button>
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>I2</p></button>
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>I3</p></button>             
+                        <button type="button" class="btn btn-cus btn-secondary disabled btn-payment"><p>I4</p></button>             
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>I5</p></button>             
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>I6</p></button>            
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>I7</p></button>           
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>I8</p></button>           
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>I9</p></button>           
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>I10</p></button>            
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>I11</p></button>              
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>I12</p></button> 
+                    </div>
+                    <div class="seat_item d-flex justify-content-center">
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>J1</p></button>
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>J2</p></button>
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>J3</p></button>             
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>J4</p></button>             
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>J5</p></button>             
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>J6</p></button>            
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>J7</p></button>           
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>J8</p></button>           
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>J9</p></button>           
+                        <button type="button" class="btn btn-cus btn-secondary disabled btn-payment"><p>J10</p></button>            
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>J11</p></button>              
+                        <button type="button" class="btn btn-cus btn-success btn-payment"><p>J12</p></button>
+                    </div>
+                    <div class="seat_item d-flex justify-content-center">
+                        <button type="button" class="btn btn-double btn-danger btn-payment"><p>K1</p></button>
+                        <button type="button" class="btn btn-double btn-danger btn-payment"><p>K2</p></button>
+                        <button type="button" class="btn btn-double btn-danger btn-payment"><p>K3</p></button>             
+                        <button type="button" class="btn btn-double btn-danger btn-payment"><p>K4</p></button>             
+                        <button type="button" class="btn btn-double btn-danger btn-payment"><p>K5</p></button>             
+                        <button type="button" class="btn btn-double btn-danger btn-payment"><p>K6</p></button>            
+                        <button type="button" class="btn btn-double btn-secondary disabled btn-payment"><p>K7</p></button>           
+                        <button type="button" class="btn btn-double btn-secondary disabled btn-payment"><p>K8</p></button>           
+                        <button type="button" class="btn btn-double btn-danger btn-payment"><p>K9</p></button>           
+                        <button type="button" class="btn btn-double btn-danger btn-payment"><p>K10</p></button>                                  
+                    </div>
+                </div>
+                <div class="mt-3">
+        <!-- Ghi chú -->
+                    <div class="note text-light">
+                        <div class="d-flex">
+                            <div class="note-item bg-secondary"></div>
+                            <p>Đã đặt</p>
+                        </div>
+                        <div class="d-flex">
+                            <div class="note-item bg-primary"></div>
+                            <p>Đang chọn</p>
+                        </div>
+                        <div class="d-flex">
+                            <div class="note-item bg-success"></div>
+                            <p>Ghế thường</p>
+                        </div>
+                        <div class="d-flex">
+                            <div class="note-item bg-warning"></div>
+                            <p>Ghế VIP</p>
+                        </div>
+                        <div class="d-flex">
+                            <div class="note-item bg-danger"></div>
+                            <p>Ghế đôi</p>
+                        </div>    
+                    </div>
+                </div>
+
+                <div class="contain text-light ">
+                    <div class="contain-item  row">
+                        <div class="col-md-7">
+                            <div class="film">
+                                <div class="film-infor">
+                                    <div class="film-infor-item">
+                                        <h5>Thông tin phim</h5>
+                                        <div class="film-name">
+                                            <p>Phim</p>
+                                            <span id="movie-name"></span>
+                                        </div>
+                                        <div class="film-time-seat row">
+                                            <div class="film-time  col-7">
+                                                <p>Ngày giờ chiếu</p>
+                                                <span id="movie-time">__:__</span>
+                                                <span>-</span>
+                                                <span id="movie-day">09/10</span>
+                                            </div>
+                                            <div class="film-seat  col-5">
+                                                <p>Ghế</p>
+                                                <span  id="selected-seats"></span>
+                                            </div>
+                                        </div>
+                                        <div class="more row">
+                                            <div class=" col-7">
+                                                <p>Định dạng</p>
+                                                <span>2D</span>
+                                            </div>
+                                            <div class=" col-5">
+                                                <p>Phòng chiếu</p>
+                                                <span>3</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="book-infor">
+                                    <div class="book-infor-item">
+                                        <h5>Thông tin thanh toán</h5>
+                                        <table>
+                                            <thead>
+                                                <th>Danh mục</th>
+                                                <th>Số lượng</th>
+                                                <th>Thành tiền</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Ghế thường</td>
+                                                    <td><span id="normal-quantity">0</span> <span> vé</span> </td>
+                                                    <td><span id="normal-money">0</span> <span> VND</span> </td>
+                                                </tr>
+                        
+                                                <tr>
+                                                    <td>Ghế VIP</td>
+                                                    <td><span id="vip-quantity">0</span> <span> vé</span> </td>
+                                                    <td><span id="vip-money">0</span> <span> VND</span> </td>
+                                                </tr>
+                        
+                                                <tr>
+                                                    <td>Ghế đôi</td>
+                                                    <td><span id="double-quantity">0</span> <span> vé</span> </td>
+                                                    <td><span id="double-money">0</span> <span> VND</span> </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="pay">
+                                <div class="payment-method">
+                                    <h5>Phương thức thanh toán</h5>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="radio" name="payment" id="momo" value="momo"/>
+                                            <label for="momo">
+                                                <img src="assests/movie/img/icon/MoMo_Logo.png" alt="momoImg">
+                                            </label>
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="radio" name="payment" id="zalo" value="zalo"/>
+                                            <label for="zalo">
+                                                <img src="assests/movie/img/icon/zalopay.png" alt="zaloImg">
+                                            </label>
+                                        </div>
+                                    </div><br>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="radio" name="payment" id="visa" value="visa"/>
+                                            <label for="visa">
+                                                <img src="assests/movie/img/icon/visa.png" alt="visaImg">
+                                            </label>
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="radio" name="payment" id="paypal" value="paypal"/>
+                                            <label for="paypal">
+                                                <img src="assests/movie/img/icon/paypal.png" alt="paypalImg">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="total">
+                                    <h5>Chi phí</h5>
+                                    <div  class="row">
+                                        <p class="col-6">Thanh toán</p>
+                                        <div class="col-6">
+                                            <span id="total-money">0</span> <span>VND</span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div  class="row">
+                                        <p class="col-6">Thuế (5%)</p>
+                                        <div class="col-6">
+                                            <span id="total-fee">0</span> <span>VND</span>
+                                        </div>                           
+                                    </div>
+                                    <div  class="row">
+                                        <p class="col-6">Tổng cộng</p>
+                                        <div class="col-6">
+                                            <span id="total-payment">0</span> <span>VND</span>
+                                        </div>                        
+                                    </div>
+                                </div>
+                                <div class="btnAndnote text-center">
+                                    <div>
+                                        <span id="errorNotice">hello</span>
+                                    </div>
+                                    <button>Thanh toán</button>
+                                    <p>Lưu ý: Không mua vé cho trẻ em dưới 
+                                    13 tuổi đối với các suất chiếu phim 
+                                    kết thúc sau 22h00 và không mua vé cho 
+                                    trẻ em dưới 16 tuổi đối với các suất 
+                                    chiếu phim kết thúc sau 23h00.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- CMT -->
+    <section>
+        <!-- <div class="container-fluid "> -->
+            <div class="cmtform container-fluid">
+                <h2>Bình Luận</h2>
+                <form id="commentForm">
+                    <textarea placeholder='Add Your Comment' class="text-light cmtbox"></textarea>
+                    <div class="formbtn">
+                        <!-- STAR -->
+                        <div class="rate">
+                            <input type="radio" id="star5" name="rate" value="5" />
+                            <label for="star5" title="text">5 stars</label>
+                            <input type="radio" id="star4" name="rate" value="4" />
+                            <label for="star4" title="text">4 stars</label>
+                            <input type="radio" id="star3" name="rate" value="3" />
+                            <label for="star3" title="text">3 stars</label>
+                            <input type="radio" id="star2" name="rate" value="2" />
+                            <label for="star2" title="text">2 stars</label>
+                            <input type="radio" id="star1" name="rate" value="1" />
+                            <label for="star1" title="text">1 star</label>
+                        </div>
+                        <!-- END STAR -->
+                        <div class="entercmt">
+                            <input type="submit" value='Comment' class="starsubmit">
+                            <button id='clear' href='#' class="starcancel">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        <!-- </div> -->
+
+        <ul class="nav nav-tabs cmttap">
+            <li class="nav-item">
+                <a class="nav-link active select_cmt" data-bs-toggle="tab" href="#home">Tất cả</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link select_cmt" data-bs-toggle="tab" href="#menu1">5 Sao</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link select_cmt" data-bs-toggle="tab" href="#menu2">4 Sao</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link select_cmt" data-bs-toggle="tab" href="#menu3">3 Sao</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link select_cmt" data-bs-toggle="tab" href="#menu4">2 Sao</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link select_cmt" data-bs-toggle="tab" href="#menu5">1 Sao</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="container tab-pane active " id="home">
+        
+                <div class="bigcmt">
+                    <div class="infor">
+                        <img src="assests/movie/img/icon/avt.png" alt="" class="  imgavt ">
+                        <p class="name">
+                            <b>PHUNG MINH</b> <br>
+                            <i>5 ngày trước</i>
+                            
+                        </p>
+                    </div>
+                    <div class="numstar">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <div class="cmt">
+                        <p>phim hay quá trời đất</p>
+                    </div>
+                </div>
+        
+                <div class="bigcmt">
+                    <div class="infor">
+                        <img src="assests/movie/img/icon/avt.png" alt="" class="  imgavt ">
+                        <p class="name">
+                            <b>Hoang Hiep</b> <br>
+                            <i>2 ngày trước</i>
+                            
+                        </p>
+                    </div>
+                    <div class="numstar">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <div class="cmt">
+                        <p>Anh Đạt đẹp trai quá ạ</p>
+                    </div>
+                </div>
+        
+                <div class="bigcmt">
+                    <div class="infor">
+                        <img src="assests/movie/img/icon/avt.png" alt="" class="  imgavt ">
+                        <p class="name">
+                            <b>Van Dat</b> <br>
+                            <i>1 ngày trước</i>
+                            
+                        </p>
+                    </div>
+                    <div class="numstar">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <div class="cmt">
+                        <p>Diễn viên xinh quá, em iuu chị !!! </p>
+                    </div>
+                </div>
+        
+                <div class="bigcmt">
+                    <div class="infor">
+                        <img src="assests/movie/img/icon/avt.png" alt="" class="  imgavt ">
+                        <p class="name">
+                            <b>Quy  Anh</b> <br>
+                            <i>1 ngày trước</i>
+                            
+                        </p>
+                    </div>
+                    <div class="numstar">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="cmt">
+                        <p>Phim Top 1 rồi còn gì </p>
+                    </div>
+                </div>
+        
+                <div class="bigcmt">
+                    <div class="infor">
+                        <img src="assests/movie/img/icon/avt.png" alt="" class="  imgavt ">
+                        <p class="name">
+                            <b>Dat dep trai</b> <br>
+                            <i>10 ngày trước</i>
+                        </p>
+                    </div>
+                    <div class="numstar">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="cmt">
+                        <p>Free thêm bỏng nước thì 5 sao </p>
+                    </div>
+                </div>
+        
+                <div class="bigcmt">
+                    <div class="infor">
+                        <img src="assests/movie/img/icon/avt.png" alt="" class="  imgavt ">
+                        <p class="name">
+                            <b>Trang Xinh</b> <br>
+                            <i>6 ngày trước</i>
+                            
+                        </p>
+                    </div>
+                    <div class="numstar">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="cmt">
+                        <p>Nay trời mưa buồn nên chỉ vote 3 sao thui! </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container tab-pane fade" id="menu1">
+                <div class="bigcmt">
+                    <div class="infor">
+                        <img src="assests/movie/img/icon/avt.png" alt="" class="  imgavt ">
+                        <p class="name">
+                            <b>PHUNG MINH</b> <br>
+                            <i>5 ngày trước</i>
+                            
+                        </p>
+                    </div>
+                    <div class="numstar">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <div class="cmt">
+                        <p>Phim hay quá trời đất </p>
+                    </div>
+                </div>
+        
+                <div class="bigcmt">
+                    <div class="infor">
+                        <img src="assests/movie/img/icon/avt.png" alt="" class="  imgavt ">
+                        <p class="name">
+                            <b>Hoang Hiep</b> <br>
+                            <i>2 ngày trước</i>
+                            
+                        </p>
+                    </div>
+                    <div class="numstar">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <div class="cmt">
+                        <p>Anh Đạt đẹp trai quá ạ </p>
+                    </div>
+                </div>
+        
+                <div class="bigcmt">
+                    <div class="infor">
+                        <img src="assests/movie/img/icon/avt.png" alt="" class="  imgavt ">
+                        <p class="name">
+                            <b>Van Dat</b> <br>
+                            <i>1 ngày trước</i>
+                            
+                        </p>
+                    </div>
+                    <div class="numstar">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <div class="cmt">
+                        <p>Diễn viên xinh quá, em yêu chị !!! </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container tab-pane fade" id="menu2">
+        
+                <div class="bigcmt">
+                    <div class="infor">
+                        <img src="assests/movie/img/icon/avt.png" alt="" class="  imgavt ">
+                        <p class="name">
+                            <b>Quy  Anh</b> <br>
+                            <i>1 ngày trước</i>                  
+                        </p>
+                    </div>
+                    <div class="numstar">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="cmt">
+                        <p>Phim Top 1 rồi còn gì </p>
+                    </div>
+                </div>
+        
+                <div class="bigcmt">
+                    <div class="infor">
+                        <img src="assests/movie/img/icon/avt.png" alt="" class="  imgavt ">
+                        <p class="name">
+                            <b>Dat dep trai</b> <br>
+                            <i>10 ngày trước</i>                   
+                        </p>
+                    </div>
+                    <div class="numstar">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="cmt">
+                        <p>Free thêm bỏng nước thì 5 sao </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container tab-pane fade" id="menu3">
+        
+                <div class="bigcmt">
+                    <div class="infor">
+                        <img src="assests/movie/img/icon/avt.png" alt="" class="  imgavt ">
+                        <p class="name">
+                            <b>Trang Xinh</b> <br>
+                            <i>6 ngày trước</i>
+                            
+                        </p>
+                    </div>
+                    <div class="numstar">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="cmt">
+                        <p>Nay trời mưa buồn nên chỉ vote 3 sao thui! </p>
+                    </div>
+                </div>
+        
+            </div>
+
+            <div class="container tab-pane fade nocmt" id="menu4">
+                <br>
+                <p ><B>Không có bình luận 2 sao nào</B></p>
+            </div>
+
+            <div class="container tab-pane fade nocmt" id="menu5">
+                <br>
+                <p ><B>Không có bình luận 1 sao nào</B></p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="row justify-content-center">
+                <div class="Company col-md-auto">
+                    <div class="footer-logo-brand"><a href="index.html"><img src="assests/movie/img/logo/logo.webp" alt="Movizz logo" class=" footer-logo"> Movizzz</a></div>
+                    <p class="slogan">Siêu vé xem phim</p>
+                </div>
+
+                <div class="contact col-md-auto">
+                    <h6 class="footer-heading">Liên hệ chúng tôi</h6>
+                    <div class="contact-list">
+                        <a href="#"><i class="fa-brands fa-facebook face-icon-footer footer-icon"></i> Facebook</a>
+                        <a href="#"><i class="fa-solid fa-envelope email-icon-footer footer-icon"></i> dathungdao2004@gmail.com</a>
+                        <p><i class="fa-solid fa-square-phone phone-icon-footer footer-icon"></i> 0385224919</p>
+                        <p><i class="fa-solid fa-location-dot address-icon-footer footer-icon"></i> CNTT2-K63</p>
+                    </div>
+                </div>
+
+                <div class="service-footer col-md-auto">
+                    <h6 class="footer-heading">Dịch vụ</h6>
+                    <a href="index.html">Home</a>
+                    <a href="#">Lịch chiếu</a>
+                    <a href="sale.html">Khuyến mãi</a>
+                    <a href="price.html">Giá</a>
+                    <a href="about.html">Giới thiệu</a>
+                </div>
+
+                <div class="term-privicy col-md-auto">
+                    <h6 class="footer-heading">Điều khoản và chính sách</h6>
+                    <a href="">Điều khoản</a>
+                    <a href="">Chính sách</a>
+                    <a href="">Câu hỏi thường gặp</a>
+                </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+JiG5C3ZnU4rd7HDWlZqf8zzTlsw3+bB6m8f7Lq5D5MUp8Iw" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="assests/movie/js/film_book.js"></script>
+    <script src="assests/home-page/js/script.js"></script>
+</body>
+
+</html>
