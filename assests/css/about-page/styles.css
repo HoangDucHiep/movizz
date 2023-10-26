@@ -1,0 +1,179 @@
+/* main */
+body {
+    color: white;
+}
+
+main h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+main .img{
+    width: 100%;
+    object-fit: cover;
+}
+
+#content1 img{
+    width: 100%;
+    height: 200px;
+    padding-right: 10x;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+main button {
+    border: none;
+    border-radius: 20px;
+    background-image: linear-gradient(45deg, rgb(46, 116, 255), rgb(181, 22, 255), rgb(220, 0, 165), rgb(220, 0, 165), rgb(181, 22, 255), rgb(46, 116, 255));
+    background-position: left;
+    background-size: 200%;
+    transition: 0.3s;
+    color: white;
+    padding: 0.5% 1%;
+    font-size: 0.9rem;
+}
+
+main button:hover {
+    transform: scale(1.05);
+    background-position: right;
+}
+
+main .container {
+    text-align:justify;
+    margin-top: 20px;
+
+}
+
+main .container p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding: 10px 10px;
+    font-size: 0.8rem;
+}
+
+main .col-md-4 img {
+    height: 220px;
+    width: 100%;
+    border-radius: 10px;
+    /* text-align: center; */
+    margin: 10px;
+}
+
+
+
+/* Footer */
+footer {
+    height: fit-content;
+    background-color: #33324260;
+    border-top: 1px solid rgba(255, 255, 255, 0.134);
+    padding: 2%;
+    width: 100vw;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.company,
+.contact,
+.term-privicy {
+    width: fit-content;
+}
+
+.footer-logo-brand a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 550;
+}
+
+.footer-heading {
+    font-size: 1rem;
+}
+
+.footer-logo-brand .footer-logo{
+    width: 2rem;
+    transition: all 0.2s;
+}
+
+.footer-logo-brand a:hover  {
+    & .footer-logo{
+        transform: rotate(10deg);
+    }
+    
+    color: #b7b7b7;
+}
+
+.Company .slogan{
+    font-style: italic;
+}
+
+
+
+.contact-list a,
+.contact-list p,
+.service-footer a,
+.term-privicy a{
+    color: white;
+    text-decoration: none;
+    margin: 0;
+}
+
+.footer-icon {
+    transition: all 0.2s;
+}
+
+.contact-list a:hover {
+    color: #a5a5a5;
+
+    & i {
+        font-size: 0.9rem;
+    }
+}
+
+.service-footer a:hover,
+.term-privicy a:hover {
+    color: #a5a5a5;
+}
+
+
+.contact-list,
+.service-footer,
+.term-privicy {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (min-width: 768px) {
+    .contact,
+    .service-footer {
+        border-left: 1px solid rgba(255, 255, 255, 0.467);
+        border-right: 1px solid rgba(255, 255, 255, 0.467);
+    }
+
+
+}
+
+
+@media (max-width: 768px) {
+
+    .contact {
+        padding: 1% 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.467);
+    }
+
+    .term-privicy {
+        padding: 1% 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.467);
+    }
+    
+    footer {
+        text-align: center;
+    }
+}

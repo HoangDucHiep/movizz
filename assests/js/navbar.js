@@ -1,4 +1,3 @@
-
 /*--nav bar stuff---------------------------------*/
 
 //search box openclose------------------------------
@@ -38,7 +37,7 @@ branchArrow.onclick = function() {
     }
 };
 
-let branchNguyenTraiArrow = document.querySelector(".branch-nguyen-trai");
+let branchNguyenTraiArrow = document.querySelector(".branch-4");
 branchNguyenTraiArrow.onclick = function() {
     if (navLinks.classList.contains("show2")) {
         navLinks.classList.remove("show2");
@@ -46,32 +45,6 @@ branchNguyenTraiArrow.onclick = function() {
         navLinks.classList.add("show2");
     }
 };
-
-
-
-//break-line
-/* var maxWidth = document.getElementById("#comming-soon").offsetWidth * 1; */
-var isVisible = false;
-    
-window.addEventListener('scroll', function () {
-    var breakline = document.querySelector('.breakline');
-    var rect = breakline.getBoundingClientRect();
-    var isInViewport = (rect.top >= 0 && rect.bottom <= window.innerHeight);
-    
-    if (isInViewport) {
-        if (!isVisible) {
-            breakline.style.width = '100%';
-            isVisible = true;
-        }
-    }else {
-        if (isVisible) {
-            breakline.style.width = '0';
-            isVisible = false;
-        }
-    }
-}, {passive: true});
-    
-
 
 /* ---------login-signup------------------- */
 let password = document.getElementById('password-sign');
@@ -305,33 +278,9 @@ const validateReset = () => {
 };
 
 
-     document.getElementById("button1").addEventListener("click", function() {
-        // Ẩn tất cả các nội dung
-        hideAllContent();
-        
-        // Hiển thị nội dung tương ứng với nút 1
-        document.getElementById("content1").style.display = "block";
-    });
-    
-    document.getElementById("button2").addEventListener("click", function() {
-        // Ẩn tất cả các nội dung
-        hideAllContent();
-        
-        // Hiển thị nội dung tương ứng với nút 2
-        document.getElementById("content2").style.display = "block";
-    });
-    
-    document.getElementById("button3").addEventListener("click", function() {
-        // Ẩn tất cả các nội dung
-        hideAllContent();
-        
-        // Hiển thị nội dung tương ứng với nút 3
-        document.getElementById("content3").style.display = "block";
-    });
-    
-    // Hàm ẩn tất cả các nội dung
-    function hideAllContent() {
-        document.getElementById("content1").style.display = "none";
-        document.getElementById("content2").style.display = "none";
-        document.getElementById("content3").style.display = "none";
-    }
+/* tooltips */
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+

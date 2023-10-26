@@ -1,0 +1,74 @@
+
+/* main */
+body{
+
+    color: white;
+    background-color: var(--main-bg);
+}
+
+main h1{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+main .giave{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+main table{
+    text-align: center;
+    table-layout: fixed;
+    width: 100%;  
+    overflow-y: scroll;
+}
+
+main table.table {
+    border: 2px solid white;
+}
+
+main .f2D, main .f3D{
+    overflow: auto;
+}
+
+main .f2D h3, main .f3D h3, main .UT h3 {
+    font-size: 1.3rem;
+}
+
+main table, main th, main td{
+    border: 2px solid white;
+    font-size: 0.65rem;
+    /* text-align: center; */
+}
+
+
+/* phones */
+@media (max-width: 576px) {
+    main body {
+        font-size: 7px;
+        }
+    }
+
+ @media ( min-width: 576px) and (max-width: 768px) {
+    main body {
+        font-size: 10px;
+        }
+    }
+/* large */
+@media (min-width: 769px) and (max-width: 1200px) {
+    main body {
+        font-size: 18px;
+        }
+    }
+
+@media (min-width: 1201px) {
+    main body {
+        font-size: 20px;
+        }
+    }
+
+    
+
+

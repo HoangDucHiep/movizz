@@ -13,7 +13,10 @@
 
     <!-- import incon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assests/price/css/styles.css">
+        <!-- css -->
+        <link rel="stylesheet" href="assests/css/styles.css">
+        <link rel="stylesheet" href="assests/css/navbar-footer.css">
+        <link rel="stylesheet" href="assests/css/price-page/styles.css">
 </head> 
 <body>
 
@@ -23,9 +26,9 @@
             <div class="navbar">
                 <i class='fa-solid fa-bars'></i>
                 <!-- nav logo begin -->
-                <div class="logo-brand"><a href="index.html"><img src="assests/price/img/logo.webp" alt="Movizz logo" class="movie-logo"> Movizz</a></div>
+                <div class="logo-brand"><a href="index.html"><img src="assests/img/logo/logo.webp" alt="Movizz logo" class="movie-logo"> Movizz</a></div>
                 <!-- nav logo end -->
-
+                
                 <!-- nav menu begin -->
                 <div class="nav-links">
                     <div class="sidebar-logo-brand">
@@ -40,10 +43,10 @@
                                 <li><a href="#" id="branch1">Ba Đình</a></li>
                                 <li><a href="#" id="branch2">Cầu Giấy</a></li>
                                 <li><a href="#" id="branch3">Thanh Xuân</a></li>
-                                <li class="branch-nguyen-trai" id="branch-4">
+                                <li class="branch-4" id="branch-4">
                                     <a href="#">Nguyễn Trãi</a>
-                                    <i class="fa-solid fa-chevron-right arrow branch-nguyen-trai-arrow"></i>
-                                    <ul class="branch-nguyen-trai-sub-menu sub-menu">
+                                    <i class="fa-solid fa-chevron-right arrow branch-4-arrow"></i>
+                                    <ul class="branch-4-sub-menu sub-menu">
                                         <li><a href="#">Rạp 1</a></li>
                                         <li><a href="#">Rạp 2</a></li>
                                         <li><a href="#">Rạp 3</a></li>
@@ -105,7 +108,7 @@
                                     
                                     <div class="password-sign">
                                     <label for="password-sign">Mật khẩu:</label>
-                                    <div class="input-field password-sign-input-field">
+                                    <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số." data-bs-custom-class="password-rule">
                                         <i class="fa-solid fa-lock input-icon"></i>
                                         <input type="password" name="password" id="password-sign">
                                         <div id="pass-toggle" onclick="showHide();">
@@ -136,8 +139,9 @@
                                 <fieldset class="sign-with">
                                     <p class="sign-with-text">Hoặc đăng nhập bằng</p>
                                     <div class="other-med">
-                                    <a href="#"><img src="assests/price/img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
-                                    <a href="#"><img src="assests/price/img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
+                                        
+                                    <a href="#"><img src="assests/img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
+                                    <a href="#"><img src="assests/img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
                                     </div>
                                 </fieldset>
 
@@ -185,7 +189,7 @@
                                     
                                     <div class="password-sign">
                                         <label for="password-sign-up">Mật khẩu:</label>
-                                        <div class="input-field password-sign-input-field">
+                                        <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số."  data-bs-custom-class="password-rule">
                                             <i class="fa-solid fa-lock input-icon"></i>
                                             <input type="password" name="password-sn" id="password-sign-up">
                                             <div id="pass-toggle-sn" onclick="showHidesn();">
@@ -198,7 +202,7 @@
 
                                     <div class="password-sign">
                                         <label for="password-sign-up-rp">Nhập lại mật khẩu:</label>
-                                        <div class="input-field password-sign-input-field">
+                                        <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số."  data-bs-custom-class="password-rule">
                                             <i class="fa-solid fa-lock input-icon"></i>
                                             <input type="password" name="password-sn-rp" id="password-sign-up-rp">
                                             <div id="pass-toggle-sn-rp" onclick="showHidesnrp();">
@@ -219,8 +223,8 @@
                                 <fieldset class="sign-with">
                                     <p class="sign-with-text">Hoặc đăng kí bằng</p>
                                     <div class="other-med">
-                                    <a href="#"><img src="assests/price/img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
-                                    <a href="#"><img src="assests/price/img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
+                                    <a href="#"><img src="assests/img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
+                                    <a href="#"><img src="assests/img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
                                     </div>
                                 </fieldset>
 
@@ -366,12 +370,9 @@
         <div class="UT">
             <h3>3. GIÁ VÉ ĐỐI VỚI ĐỐI TƯỢNG ƯU TIÊN</h3>
             <ul>
-            <p> Giảm 20% giá vé<br> Giảm 50% giá vé<br> Giảm 100% giá vé</p> 
-            </ul>
-
-            <ul>
-                Điều kiện
-                <li>Áp dụng khi mua vé tại quầy</li>
+                <p> - Giảm 20% giá vé theo qui định đối với: Trẻ em (người dưới 16 tuổi), người cao tuổi (công dân Việt Nam từ đủ 60 tuổi trở lên), người có công với cách mạng, người có hoàn cảnh đặc biệt khó khăn.</p>
+                <p> - Giảm 50% giá vé theo qui định đối với: Người khuyết tật nặng.</p>
+                <p> - Giảm giá vé 100% đối với: Người khuyết tật đặc biệt nặng, trẻ em dưới 0.7m đi kèm với người lớn.</p> 
             </ul>
         </div>
         </div>
@@ -382,7 +383,7 @@
     <footer>
         <div class="row justify-content-center">
                 <div class="Company col-md-auto">
-                    <div class="footer-logo-brand"><a href="index.html"><img src="assests/home-page/img/logo/logo.webp" alt="Movizz logo" class=" footer-logo"> Movizzz</a></div>
+                    <div class="footer-logo-brand"><a href="index.html"><img src="assests/img/logo/logo.webp" alt="Movizz logo" class=" footer-logo"> Movizzz</a></div>
                     <p class="slogan">Siêu vé xem phim</p>
                 </div>
 
@@ -414,9 +415,10 @@
         </div>
     </footer>
 
+    <!-- Latest compiled JavaScript   -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+JiG5C3ZnU4rd7HDWlZqf8zzTlsw3+bB6m8f7Lq5D5MUp8Iw" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="assests/price/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assests/js/navbar.js"></script>
 </body>
 
 </html>
