@@ -343,7 +343,7 @@ body{
 }
 
 .section1{
-    margin: 0 auto 5%;
+    margin: 0 auto 3%;
     background: linear-gradient(rgba(0, 0, 0, 0.944), rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.911));
     position: relative;
     top: 70px;
@@ -360,7 +360,7 @@ body{
     top: 0;
     right: 0;
     bottom: 0;
-    background-image: url('/assests/img/movies-thumbs/spiderman-wide.webp');
+    background-image: url('../assests/img/movies-thumbs/spiderman-wide.webp');
     z-index: -1;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -441,7 +441,7 @@ body{
         top: 0;
         right: 0;
         bottom: 0;
-        background-image: url('/assests/img/movies-thumbs/spiderman.webp');
+        background-image: url('../assests/img/movies-thumbs/spiderman.webp');
         z-index: -1;
         background-size: 150%;
         background-repeat: no-repeat;
