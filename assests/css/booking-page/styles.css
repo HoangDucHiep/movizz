@@ -1,5 +1,6 @@
 body{
-    background-color: rgb(29, 26, 26);
+    background-color: #060505;
+    z-index: -100;
 }
 .book{
     width: 80%;
@@ -337,14 +338,34 @@ body{
     
 }
 
-.section1{
-    margin-bottom: 5%;
-    background-color: rgba(8, 8, 8, 0.882);
-    position: relative;
-    top: 70px;
-    margin-bottom: 5%;
+.movie-inf {
+    width: 100%;
 }
 
+.section1{
+    margin: 0 auto 2%;
+    background: linear-gradient(rgba(0, 0, 0, 0.944), rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.911));
+    position: relative;
+    top: 70px;
+    padding: 4%;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+}
+.section1::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assests/img/movies-thumbs/spiderman-wide.webp');
+    z-index: -1;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .movie_img, .introduce{
     padding: 10px !important;
 }
@@ -362,16 +383,7 @@ body{
     justify-content: center;
 }
 
-.section1::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('assests/movies/img/movie/spiderman.webp');
-    z-index: -1;
-}
+
 
 .film_img{
     border-radius: 10px;
@@ -397,7 +409,7 @@ body{
 }
 
 .mymodal{
-    background: black;
+    background: rgb(0, 0, 0);
 }
 
 @media only screen and (max-width: 760px) {
@@ -410,6 +422,19 @@ body{
     .section1{
         margin-bottom: 15%;
         top: 70px;
+    }
+    .section1::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('/assests/img/movies-thumbs/spiderman.webp');
+        z-index: -1;
+        background-size: 150%;
+        background-repeat: no-repeat;
+        background-position: top;
     }
 }
 
@@ -469,6 +494,11 @@ body{
     .mytrailer{
         max-height: max-content;
         height: 150px;
+    }
+}
+@media only screen and (max-width: 420px){
+    .introduce p{
+        margin-left: 5%;
     }
 }
 

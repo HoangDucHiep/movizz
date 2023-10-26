@@ -5,7 +5,7 @@
     <meta name="description" content="Gioi thieu Web ban ve xem phim - bai tap lon - cntt2 - utc">  <!-- seo stuff!! -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <link rel="icon" type="image/x-icon" href="assests/img/logo/logo.webp">
+    <link rel="icon" type="image/x-icon" href="/assests/img/logo/logo.webp">
     <title>Giới thiệu</title>
     <!-- bootstrap & css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -14,9 +14,9 @@
     <!-- import incon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <link rel="stylesheet" href="assests/css/styles.css">
-    <link rel="stylesheet" href="assests/css/navbar-footer.css">
-    <link rel="stylesheet" href="assests/css/about-page/styles.css">
+    <link rel="stylesheet" href="/assests/css/styles.css">
+    <link rel="stylesheet" href="/assests/css/navbar-footer.css">
+    <link rel="stylesheet" href="/assests/css/about-page/styles.css">
     
 </head>
 <body>
@@ -27,9 +27,9 @@
             <div class="navbar">
                 <i class='fa-solid fa-bars'></i>
                 <!-- nav logo begin -->
-                <div class="logo-brand"><a href="index.html"><img src="assests/img/logo/logo.webp" alt="Movizz logo" class="movie-logo"> Movizz</a></div>
+                <div class="logo-brand"><a href="/index.html"><img src="/assests/img/logo/logo.webp" alt="Movizz logo" class="movie-logo"> Movizz</a></div>
                 <!-- nav logo end -->
-
+                
                 <!-- nav menu begin -->
                 <div class="nav-links">
                     <div class="sidebar-logo-brand">
@@ -44,10 +44,10 @@
                                 <li><a href="#" id="branch1">Ba Đình</a></li>
                                 <li><a href="#" id="branch2">Cầu Giấy</a></li>
                                 <li><a href="#" id="branch3">Thanh Xuân</a></li>
-                                <li class="branch-nguyen-trai" id="branch-4">
+                                <li class="branch-4" id="branch-4">
                                     <a href="#">Nguyễn Trãi</a>
-                                    <i class="fa-solid fa-chevron-right arrow branch-nguyen-trai-arrow"></i>
-                                    <ul class="branch-nguyen-trai-sub-menu sub-menu">
+                                    <i class="fa-solid fa-chevron-right arrow branch-4-arrow"></i>
+                                    <ul class="branch-4-sub-menu sub-menu">
                                         <li><a href="#">Rạp 1</a></li>
                                         <li><a href="#">Rạp 2</a></li>
                                         <li><a href="#">Rạp 3</a></li>
@@ -56,10 +56,10 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="schedule.html">Lịch Chiếu</a></li>
-                        <li><a href="sale.html">Khuyến Mãi</a></li>
-                        <li><a href="price.html">Giá</a></li>
-                        <li><a href="about.html">Giới Thiệu</a></li>
+                        <li><a href="/schedule.html">Lịch Chiếu</a></li>
+                        <li><a href="/sale.html">Khuyến Mãi</a></li>
+                        <li><a href="/price.html">Giá</a></li>
+                        <li><a href="/about.html">Giới Thiệu</a></li>
                     </ul>
                 </div>
                 <!-- nav menu end -->
@@ -109,7 +109,7 @@
                                     
                                     <div class="password-sign">
                                     <label for="password-sign">Mật khẩu:</label>
-                                    <div class="input-field password-sign-input-field">
+                                    <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số." data-bs-custom-class="password-rule">
                                         <i class="fa-solid fa-lock input-icon"></i>
                                         <input type="password" name="password" id="password-sign">
                                         <div id="pass-toggle" onclick="showHide();">
@@ -140,8 +140,9 @@
                                 <fieldset class="sign-with">
                                     <p class="sign-with-text">Hoặc đăng nhập bằng</p>
                                     <div class="other-med">
-                                    <a href="#"><img src="assests/img/about-img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
-                                    <a href="#"><img src="assests/img/about-img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
+                                        
+                                    <a href="#"><img src="/assests/img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
+                                    <a href="#"><img src="/assests/img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
                                     </div>
                                 </fieldset>
 
@@ -189,7 +190,7 @@
                                     
                                     <div class="password-sign">
                                         <label for="password-sign-up">Mật khẩu:</label>
-                                        <div class="input-field password-sign-input-field">
+                                        <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số."  data-bs-custom-class="password-rule">
                                             <i class="fa-solid fa-lock input-icon"></i>
                                             <input type="password" name="password-sn" id="password-sign-up">
                                             <div id="pass-toggle-sn" onclick="showHidesn();">
@@ -202,7 +203,7 @@
 
                                     <div class="password-sign">
                                         <label for="password-sign-up-rp">Nhập lại mật khẩu:</label>
-                                        <div class="input-field password-sign-input-field">
+                                        <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số."  data-bs-custom-class="password-rule">
                                             <i class="fa-solid fa-lock input-icon"></i>
                                             <input type="password" name="password-sn-rp" id="password-sign-up-rp">
                                             <div id="pass-toggle-sn-rp" onclick="showHidesnrp();">
@@ -223,8 +224,8 @@
                                 <fieldset class="sign-with">
                                     <p class="sign-with-text">Hoặc đăng kí bằng</p>
                                     <div class="other-med">
-                                    <a href="#"><img src="assests/img/about-img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
-                                    <a href="#"><img src="assests/img/about-img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
+                                    <a href="#"><img src="/assests/img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
+                                    <a href="#"><img src="/assests/img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
                                     </div>
                                 </fieldset>
 
@@ -284,7 +285,7 @@
     <!-- giới thieeuj -->
             <div id="content1">
                 <div>
-                    <img src="assests/img/about-img/MOVIZZ.png" alt="MOVIZZ">
+                    <img src="/assests/img/about-img/MOVIZZ.png" alt="MOVIZZ">
                 </div>
                 <div>
                     <p><br>Movizz Cinema được thành lập ngày 23 tháng 09 năm 2023, trụ sở chính đặt tại 
@@ -306,14 +307,14 @@
                 
                 <div class="row"> 
                     <div class="col-md-4 col-sm-12">
-                        <img src="assests/img/about-img/dv.jpg" alt="">
+                        <img src="/assests/img/about-img/dv.jpg" alt="">
                     </div>
                     
                     <div class="col-md-4 col-sm-12">
-                        <img src="assests/img/about-img/dv1.jpg" alt="">
+                        <img src="/assests/img/about-img/dv1.jpg" alt="">
                     </div>
                     <div class="col-md-4 col-sm-12">
-                        <img src="assests/img/about-img/about-4.png" alt="">
+                        <img src="/assests/img/about-img/about-4.png" alt="">
                     </div>
 
                 </div>     
@@ -330,15 +331,15 @@
                 </div> 
                 <div class="row">
                     <div class="col-md-4 col-sm-12">
-                        <img src="assests/img/about-img/pc.jpg" alt="">
+                        <img src="/assests/img/about-img/pc.jpg" alt="">
                     </div> 
 
                     <div class="col-md-4 col-sm-12">
-                        <img src="assests/img/about-img/pc1.webp" alt="">
+                        <img src="/assests/img/about-img/pc1.webp" alt="">
                     </div>
 
                     <div class="col-md-4 col-sm-12">
-                        <img src="assests/img/about-img/pc2.webp" alt="">
+                        <img src="/assests/img/about-img/pc2.webp" alt="">
                     </div>
                 </div>
                     
@@ -350,7 +351,7 @@
     <footer>
         <div class="row justify-content-center">
                 <div class="Company col-md-auto col-12">
-                    <div class="footer-logo-brand"><a href="index.html"><img src="assests/img/logo/logo.webp" alt="Movizz logo" class=" footer-logo"> Movizzz</a></div>
+                    <div class="footer-logo-brand"><a href="index.html"><img src="/assests/img/logo/logo.webp" alt="Movizz logo" class=" footer-logo"> Movizzz</a></div>
                     <p class="slogan">Siêu vé xem phim</p>
                 </div>
 
@@ -366,11 +367,11 @@
 
                 <div class="service-footer col-md-auto col-12">
                     <h6 class="footer-heading">Dịch vụ</h6>
-                    <a href="index.html">Home</a>
-                    <a href="#">Lịch chiếu</a>
-                    <a href="sale.html">Khuyến mãi</a>
-                    <a href="price.html">Giá</a>
-                    <a href="about.html">Giới thiệu</a>
+                    <a href="/index.html">Home</a>
+                    <a href="/schedule.html">Lịch chiếu</a>
+                    <a href="/sale.html">Khuyến mãi</a>
+                    <a href="/price.html">Giá</a>
+                    <a href="/about.html">Giới thiệu</a>
                 </div>
  
                 <div class="term-privicy col-md-auto col-12">
@@ -384,7 +385,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+JiG5C3ZnU4rd7HDWlZqf8zzTlsw3+bB6m8f7Lq5D5MUp8Iw" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assests/js/navbar.js"></script>
-    <script src="assests/js/about-page/script.js" ></script>
+    <script src="/assests/js/navbar.js"></script>
+    <script src="/assests/js/about-page/script.js" ></script>
 </body>
 </html>
