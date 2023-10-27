@@ -9,7 +9,7 @@ $(document).ready(function () {
         arrows: false,
         fade: true,
         autoplay: true,
-        autoplaySpeed: 10000,
+        autoplaySpeed: 5000,
         asNavFor: '.center-slider',
     });
 
@@ -23,7 +23,7 @@ $(document).ready(function () {
         speed: 300,
         centerPadding: '0px',
         infinite: true,
-        autoplaySpeed: 10000,
+        autoplaySpeed: 5000,
         autoplay: true,
         asNavFor: '.main-slide',
         focusOnSelect: true,
@@ -51,7 +51,7 @@ $(document).ready(function () {
 
     
 
-
+    /* pause and playvideo when slide change */
     $(window).on('resize', function() {
         /* Video casousel autoplay */
         if($(window).width() < 800) {
@@ -78,6 +78,29 @@ $(document).ready(function () {
             });
         }
     });
+
+
+
+    /* text effect */
+    $('.main-slide').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+
+        var $currentMovieText = $(slick.$slides[currentSlide]).find('.slide-movie-text');
+        var $nextMovieText = $(slick.$slides[nextSlide]).find('.slide-movie-text');
+
+        $nextMovieText.css({
+            'opacity': 0,
+        });
+    });
+
+    $('.main-slide').on('afterChange', function(event, slick, previousSlide, nextSlide) {
+        var $prevMovieText = $(slick.$slides[previousSlide]).find('.slide-movie-text');
+    
+        // Thiết lập tất cả các thuộc tính CSS cùng một lúc
+        $prevMovieText.css({
+            'opacity': '1',
+        });
+    });
+    
 
 
 
