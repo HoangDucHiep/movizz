@@ -1,55 +1,3 @@
-/*commonn css*/
-.white-text {
-    color: white !important;
-}
-
-/* import font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-
-/* color vari, and.... */
-:root {
-    --nav-bg-lg-layout: rgba(0 ,0 ,0 , 0.7);
-    --nav-bg-sm-layout: rgba(0 ,0 ,0 , 0.8);
-    --main-bg: rgb(6, 0, 12);
-}
-
-
-/* tooltips */
-.password-rule > .tooltip-inner {
-    border: 1px solid rgba(255, 255, 255, 0.515);
-    font-size: 0.7rem;
-}
-
-.password-rule .tooltip-arrow {
-    display: none;
-}
-
-
-
-/*universal*/
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-html {
-    width: 100vw;
-    height: 100%;
-    font-size: calc(15px + 0.390625vw);
-    overflow-x: hidden;
-}
-
-body {
-    background-color: var(--main-bg);
-    width: 100%;
-    height: 100%;
-}
-
-
 /* Large layout navbar*/
 
 /* navbar --------------------------------------------------------*/
@@ -974,8 +922,6 @@ footer {
         border-left: 1px solid rgba(255, 255, 255, 0.467);
         border-right: 1px solid rgba(255, 255, 255, 0.467);
     }
-
-
 }
 
 
@@ -984,6 +930,7 @@ footer {
     .contact {
         padding: 1% 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.467);
+        margin: 2% 0;
     }
 
     .term-privicy {
