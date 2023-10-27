@@ -9,7 +9,7 @@ $(document).ready(function () {
         arrows: false,
         fade: true,
         autoplay: true,
-        autoplaySpeed: 10000,
+        autoplaySpeed: 15000,
         asNavFor: '.center-slider',
     });
 
@@ -23,7 +23,7 @@ $(document).ready(function () {
         speed: 300,
         centerPadding: '0px',
         infinite: true,
-        autoplaySpeed: 10000,
+        autoplaySpeed: 15000,
         autoplay: true,
         asNavFor: '.main-slide',
         focusOnSelect: true,
