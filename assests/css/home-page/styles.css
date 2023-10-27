@@ -758,7 +758,7 @@ nav .navbar .nav-links .links .branch-4 .branch-4-sub-menu{
         transition: all 0.4s ease-in-out;
     }
     
-    /* Active center slide (You can change anything here for cenetr slide)*/
+    /* Active center slide */
     .center-slider .slick-current.slick-active{
         opacity: 1;
         transform: scale(0.8);
@@ -806,13 +806,6 @@ nav .navbar .nav-links .links .branch-4 .branch-4-sub-menu{
         text-align: center; /* Center align the text */
     }
 
-    .movie-content {
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;  
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-    }
     .main-slide .item .slide-movie-text .movie-dir {
         display: none;
     }
@@ -863,7 +856,7 @@ nav .navbar .nav-links .links .branch-4 .branch-4-sub-menu{
     
     .center-slider .slick-slide,
     .center-slider .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
-        transform: scale(0.6, 0.6);
+        transform: scale(0.55, 0.55);
         opacity: 0.5;
         transition: all 0.4s ease-in-out;
     }
