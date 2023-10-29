@@ -30,7 +30,6 @@ const MyButtons = Array.from(document.getElementsByClassName('btn-double'));
 for (let i = 0; i < MyButtons.length; i++) {
   if (!MyButtons[i].disabled) {
     MyButtons[i].addEventListener('click', function() {
-      
       updateDoubleseats(i)
       toggleButtonColor(i)
     });       
@@ -261,52 +260,66 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
 document.addEventListener("DOMContentLoaded", function() {
-    // Lấy các phần tử trên trang
-    var selectedTime = null;
-    var selectedSeats = [];
-    var selectedPayment = null;
-    var errorNotice = document.getElementById("errorNotice");
+  let selectedTimeCheck = false;
+  let selectedSeatsCheck = false;
+  let selectedPaymentCheck = false;
+  const errorNotice = document.getElementById("errorNotice");
 
-    // Bắt sự kiện khi nút "Thanh toán" được nhấn
-    var paymentButton = document.querySelector(".btnAndnote button");
-    paymentButton.addEventListener("click", function() {
-        // Kiểm tra xem người dùng đã chọn giờ
-        var timeButtons = document.querySelectorAll(".select_time");
-        for (var i = 0; i < timeButtons.length; i++) {
-            if (timeButtons[i].classList.contains("active")) {
-                selectedTime = timeButtons[i].textContent;
-                break;
-            }
-        }
+  // Bắt sự kiện khi nút "Thanh toán" được nhấn
+  const paymentButton = document.querySelector(".btnAndnote button");
+  paymentButton.addEventListener("click", function() {
+      
+      const timeButtons = document.querySelectorAll(".select_time");
+      for (var i = 0; i < timeButtons.length; i++) {
+          if (timeButtons[i].classList.contains("select_timeactive")) {
+            selectedTimeCheck = true;
+            break;
+          }
+      }
 
-        // Kiểm tra xem người dùng đã chọn ghế
-        var selectedSeatsButtons = document.querySelectorAll(".btn-payment");
-        selectedSeats = [];
-        for (var i = 0; i < selectedSeatsButtons.length; i++) {
-            if (selectedSeatsButtons[i].classList.contains("btn-success")) {
-                selectedSeats.push(selectedSeatsButtons[i].textContent);
-            }
-        }
+      
+      const selectedSeatsButtons = document.querySelectorAll(".btn-payment");
+      for (var i = 0; i < selectedSeatsButtons.length; i++) {
+          if (selectedSeatsButtons[i].classList.contains("bg-primary")) {
+            selectedSeatsCheck = true;
+            break;
+          }
+      }
 
-        // Kiểm tra phương thức thanh toán
-        var paymentOptions = document.querySelectorAll("input[name='payment']");
-        for (var i = 0; i < paymentOptions.length; i++) {
-            if (paymentOptions[i].checked) {
-                selectedPayment = paymentOptions[i].value;
-                break;
-            }
-        }
+      
+      const paymentOptions = document.querySelectorAll("input[name='payment']");
+      for (var i = 0; i < paymentOptions.length; i++) {
+          if (paymentOptions[i].checked) {
+            selectedPaymentCheck = true;
+            break;
+          }
+      }
 
-        // Kiểm tra các điều kiện và hiển thị thông báo tương ứng
-        if (selectedTime && selectedSeats.length > 0 && selectedPayment) {
-            errorNotice.textContent = "Thanh toán thành công!";
-        } else {
-            errorNotice.textContent = "Vui lòng chọn giờ, ghế và phương thức thanh toán trước khi thanh toán.";
-        }
-    });
+
+      if (selectedTimeCheck ===false && selectedSeatsCheck ===false && selectedPaymentCheck ===false) {
+          errorNotice.textContent = "Vui lòng chọn giờ, ghế và phương thức thanh toán.";
+      } else if(selectedTimeCheck === true && selectedSeatsCheck ===false && selectedPaymentCheck ===false){
+          errorNotice.textContent = "Vui lòng chọn ghế và phương thức thanh toán.";
+      } else if(selectedTimeCheck ===false && selectedSeatsCheck ===true && selectedPaymentCheck ===false){
+        errorNotice.textContent = "Vui lòng chọn giờ và phương thức thanh toán.";
+      } else if(selectedTimeCheck ===false && selectedSeatsCheck ===false && selectedPaymentCheck ===true){
+        errorNotice.textContent = "Vui lòng chọn giờ và ghế.";
+      } else if(selectedTimeCheck ===true && selectedSeatsCheck ===true && selectedPaymentCheck ===false){
+        errorNotice.textContent = "Vui lòng chọn phương thức thanh toán.";
+      } else if(selectedTimeCheck ===true && selectedSeatsCheck ===false && selectedPaymentCheck ===true){
+        errorNotice.textContent = "Vui lòng chọn ghế.";
+      } else if(selectedTimeCheck ===false && selectedSeatsCheck ===true && selectedPaymentCheck ===true){
+        errorNotice.textContent = "Vui lòng chọn giờ.";
+      } else {
+        errorNotice.textContent = "";
+        var modal = document.getElementById('loginModal');
+        var modalInstance = new bootstrap.Modal(modal);
+        modalInstance.show();
+      }
+  });
 });
+
 
 
 
