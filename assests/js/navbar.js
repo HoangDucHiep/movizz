@@ -206,15 +206,24 @@ const login = document.getElementById('signin-form');
 const emailLogin = document.getElementById('email-sign');
 const passwordLogin = document.getElementById('password-sign');
 
+let isFormValid = false;
 
 login.addEventListener('submit', e => {
-    e.preventDefault();
     validateLogin();
+    if (!isFormValid) {
+        e.preventDefault();
+    }
 });
 
 const validateLogin = () => {
+    isFormValid = true;
+
     emailValidate(emailLogin);
     passValidate(passwordLogin);
+
+    if (emailLogin.parentElement.classList.contains('error') || passwordLogin.parentElement.classList.contains('error')) {
+        isFormValid = false;
+    }
 }
 
 /* Sign up form */

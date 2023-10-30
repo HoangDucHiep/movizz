@@ -27,7 +27,7 @@
             <div class="navbar">
                 <i class='fa-solid fa-bars'></i>
                 <!-- nav logo begin -->
-                <div class="logo-brand"><a href="../index.html"><img src="../assests/img/logo/logo.webp" alt="Movizz logo" class="movie-logo"> Movizz</a></div>
+                <div class="logo-brand"><a href="index.html"><img src="assests/img/logo/logo.webp" alt="Movizz logo" class="movie-logo"> Movizz</a></div>
                 <!-- nav logo end -->
                 
                 <!-- nav menu begin -->
@@ -38,28 +38,28 @@
                     </div>
                     <ul class="links">
                         <li>
-                            <a href="#" class="branch">Cụm rạp</a>
+                            <span class="branch">Cụm rạp</span>
                             <i class="fa-solid fa-chevron-up arrow branch-arrow"></i>
                             <ul class="branch-sub-menu sub-menu">
-                                <li><a href="#" id="branch1">Ba Đình</a></li>
-                                <li><a href="#" id="branch2">Cầu Giấy</a></li>
-                                <li><a href="#" id="branch3">Thanh Xuân</a></li>
+                                <li><a href="#" id="branch-1">Ba Đình</a></li>
+                                <li><a href="#" id="branch-1">Cầu Giấy</a></li>
+                                <li><a href="#" id="branch-3">Thanh Xuân</a></li>
                                 <li class="branch-4" id="branch-4">
-                                    <a href="#">Nguyễn Trãi</a>
+                                    <span>Ba Vì</span>
                                     <i class="fa-solid fa-chevron-right arrow branch-4-arrow"></i>
                                     <ul class="branch-4-sub-menu sub-menu">
-                                        <li><a href="#">Rạp 1</a></li>
-                                        <li><a href="#">Rạp 2</a></li>
-                                        <li><a href="#">Rạp 3</a></li>
-                                        <li><a href="#">Rạp 4</a></li>
+                                        <li><a href="schedule.html">Rạp 1</a></li>
+                                        <li><a href="schedule.html">Rạp 2</a></li>
+                                        <li><a href="schedule.html">Rạp 3</a></li>
+                                        <li><a href="schedule.html">Rạp 4</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="../schedule.html">Lịch Chiếu</a></li>
-                        <li><a href="../sale.html">Khuyến Mãi</a></li>
-                        <li><a href="../price.html">Giá</a></li>
-                        <li><a href="../about.html">Giới Thiệu</a></li>
+                        <li><a href="schedule.html">Lịch Chiếu</a></li>
+                        <li><a href="sale.html">Khuyến Mãi</a></li>
+                        <li><a href="price.html">Giá</a></li>
+                        <li><a href="about.html">Giới Thiệu</a></li>
                     </ul>
                 </div>
                 <!-- nav menu end -->
@@ -86,187 +86,190 @@
         <!-- nav end -->
         
         <!-- login modal -->
-        <div class="modal" id="loginModal">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content sign-modal-content">
-
-                    <!-- Modal body -->
-                    <div class="modal-body sign-modal-body">
-                        <div id="login">
-                            <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
-                            <h2 class="login-form-header">Đăng nhập</h2>
-                            <form id="signin-form" action="/">
-                                <fieldset class="email-pass-acc">
-                                    <div class="email-sign">
-                                        <label for="email-sign">Email:</label>
-                                        <div class="input-field email-sign-input-field">
-                                            <i class="fa-regular fa-envelope input-icon"></i>
-                                            <input type="text" id="email-sign" name="email">
-                                            <div class="error"></div>
+        <section>
+            <div class="modal" id="loginModal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content sign-modal-content">
+    
+                        <!-- Modal body -->
+                        <div class="modal-body sign-modal-body">
+                            <div id="login">
+                                <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
+                                <h2 class="login-form-header">Đăng nhập</h2>
+                                <form id="signin-form" action="/">
+                                    <fieldset class="email-pass-acc">
+                                        <div class="email-sign">
+                                            <label for="email-sign">Email:</label>
+                                            <div class="input-field email-sign-input-field">
+                                                <i class="fa-regular fa-envelope input-icon"></i>
+                                                <input type="text" id="email-sign" name="email">
+                                                <div class="error"></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    
-                                    
-                                    <div class="password-sign">
-                                    <label for="password-sign">Mật khẩu:</label>
-                                    <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số." data-bs-custom-class="password-rule">
-                                        <i class="fa-solid fa-lock input-icon"></i>
-                                        <input type="password" name="password" id="password-sign">
-                                        <div id="pass-toggle" onclick="showHide();">
-                                            <i class="fa-regular fa-eye show-tog"></i>
-                                            <i class="fa-regular fa-eye-slash hide-tog"></i>
-                                        </div>
-                                        <div class="error"></div>
-                                    </div>
-                                    </div>
-                    
-                                    <div class="remember-and-forget-log">
-                                    <div class="remember-log">
-                                        <input type="checkbox" id="remember" name="remember">
-                                        <label for="remember">Nhớ tôi</label>
-                                    </div>
-                                    <div class="forget-log">
-                                        <a href="#" id="to-reset">Quên mật khẩu?</a>
-                                    </div>
-                                    </div>
-                                    
-                                    <div class="submit">
-                                        <button type="submit" id="login-sub">Đăng nhập</button>
-                                    </div>
-                                    
-                                </fieldset>
-                                
-
-                                <fieldset class="sign-with">
-                                    <p class="sign-with-text">Hoặc đăng nhập bằng</p>
-                                    <div class="other-med">
                                         
-                                    <a href="#"><img src="../assests/img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
-                                    <a href="#"><img src="../assests/img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset class="change-sign-up">
-                                    <a href="#" id="to-sign-up-link">Đăng kí</a>
-                                </fieldset>
-                            </form>
-                        </div>
-
-                        <!-- sign up -->
-                        <div id="signup">
-                            <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
-                            <h2 class="signup-form-header">Đăng kí</h2>
-                            <form action="/" id="signup-form">
-                                <fieldset class="email-pass-acc">
-                                    <div class="email-sign">
-                                        <label for="email-sign-up">Email:</label>
-                                        <div class="input-field email-sign-input-field">
-                                            <i class="fa-regular fa-envelope input-icon"></i>
-                                            <input type="email" id="email-sign-up" name="email-sn">
-                                            <div class="error"></div>
-                                        </div>
-                                    
-                                    </div>
-
-                                    <div class="name-sign">
-                                        <label for="name-sign-up">Họ và tên:</label>
-                                        <div class="input-field name-sign-input-field">
-                                            <i class="fa-regular fa-user input-icon"></i>
-                                            <input type="text" id="name-sign-up" name="name-sn">
-                                            <div class="error"></div>
-                                        </div>
-                                    
-                                    </div>
-
-                                    <div class="phone-sign">
-                                        <label for="phone-sign">Số điện thoại:</label>
-                                        <div class="input-field phone-sign-input-field">
-                                            <i class="fa-solid fa-phone input-icon"></i>
-                                            <input type="text" id="phone-sign-up" name="phone-sn">
-                                            <div class="error"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                    <div class="password-sign">
-                                        <label for="password-sign-up">Mật khẩu:</label>
-                                        <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số."  data-bs-custom-class="password-rule">
+                                        
+                                        <div class="password-sign">
+                                        <label for="password-sign">Mật khẩu:</label>
+                                        <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số." data-bs-custom-class="password-rule">
                                             <i class="fa-solid fa-lock input-icon"></i>
-                                            <input type="password" name="password-sn" id="password-sign-up">
-                                            <div id="pass-toggle-sn" onclick="showHidesn();">
+                                            <input type="password" name="password" id="password-sign">
+                                            <div id="pass-toggle" onclick="showHide();">
                                                 <i class="fa-regular fa-eye show-tog"></i>
                                                 <i class="fa-regular fa-eye-slash hide-tog"></i>
                                             </div>
                                             <div class="error"></div>
                                         </div>
-                                    </div>
-
-                                    <div class="password-sign">
-                                        <label for="password-sign-up-rp">Nhập lại mật khẩu:</label>
-                                        <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số."  data-bs-custom-class="password-rule">
-                                            <i class="fa-solid fa-lock input-icon"></i>
-                                            <input type="password" name="password-sn-rp" id="password-sign-up-rp">
-                                            <div id="pass-toggle-sn-rp" onclick="showHidesnrp();">
-                                                <i class="fa-regular fa-eye show-tog"></i>
-                                                <i class="fa-regular fa-eye-slash hide-tog"></i>
+                                        </div>
+                        
+                                        <div class="remember-and-forget-log">
+                                        <div class="remember-log">
+                                            <input type="checkbox" id="remember" name="remember">
+                                            <label for="remember">Nhớ tôi</label>
+                                        </div>
+                                        <div class="forget-log">
+                                            <a href="#" id="to-reset">Quên mật khẩu?</a>
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="submit">
+                                            <button type="submit" id="login-sub">Đăng nhập</button>
+                                        </div>
+                                        
+                                    </fieldset>
+                                    
+    
+                                    <fieldset class="sign-with">
+                                        <p class="sign-with-text">Hoặc đăng nhập bằng</p>
+                                        <div class="other-med">
+                                            
+                                        <a href="#"><img src="assests/img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
+                                        <a href="#"><img src="assests/img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
+                                        </div>
+                                    </fieldset>
+    
+                                    <fieldset class="change-sign-up">
+                                        <a href="#" id="to-sign-up-link">Đăng kí</a>
+                                    </fieldset>
+                                </form>
+                            </div>
+    
+                            <!-- sign up -->
+                            <div id="signup">
+                                <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
+                                <h2 class="signup-form-header">Đăng kí</h2>
+                                <form action="/" id="signup-form">
+                                    <fieldset class="email-pass-acc">
+                                        <div class="email-sign">
+                                            <label for="email-sign-up">Email:</label>
+                                            <div class="input-field email-sign-input-field">
+                                                <i class="fa-regular fa-envelope input-icon"></i>
+                                                <input type="email" id="email-sign-up" name="email-sn">
+                                                <div class="error"></div>
                                             </div>
-                                            <div class="error"></div>
+                                        
                                         </div>
-                                    </div>
-                                    
-                                    <div class="submit">
-                                        <button type="submit" id="signup-sub">Đăng kí</button>
-                                    </div>
-                                    
-                                </fieldset>
-                                
-
-                                <fieldset class="sign-with">
-                                    <p class="sign-with-text">Hoặc đăng kí bằng</p>
-                                    <div class="other-med">
-                                    <a href="#"><img src="../assests/img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
-                                    <a href="#"><img src="../assests/img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset class="change-sign-up">
-                                    <a href="#" id="to-login-link">Đăng nhập</a>
-                                </fieldset>
-                            </form>
-                        </div>
-
-
-                        <!-- forgot pass -->
-                        <div id="reset-pass">
-                            <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
-                            <h2 class="reset-pass-form-header">Quên mật khẩu</h2>
-                            <form id="reset-pass-form" action="/">
-                                <fieldset class="email-pass-acc">
-                                    <p id="reset-pass-guide">Liên kết đặt lại mặt khẩu sẽ được gửi vào email của bạn</p>
-                                    <div class="reset-pass">
-                                        <label for="reset-pass">Email:</label>
-                                        <div class="input-field reset-pass-input-field">
-                                            <i class="fa-regular fa-envelope input-icon"></i>
-                                            <input type="email" id="reset-pass-input" name="email">
-                                            <div class="error"></div>
+    
+                                        <div class="name-sign">
+                                            <label for="name-sign-up">Họ và tên:</label>
+                                            <div class="input-field name-sign-input-field">
+                                                <i class="fa-regular fa-user input-icon"></i>
+                                                <input type="text" id="name-sign-up" name="name-sn">
+                                                <div class="error"></div>
+                                            </div>
+                                        
                                         </div>
-                                    </div>
+    
+                                        <div class="phone-sign">
+                                            <label for="phone-sign">Số điện thoại:</label>
+                                            <div class="input-field phone-sign-input-field">
+                                                <i class="fa-solid fa-phone input-icon"></i>
+                                                <input type="text" id="phone-sign-up" name="phone-sn">
+                                                <div class="error"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="password-sign">
+                                            <label for="password-sign-up">Mật khẩu:</label>
+                                            <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số."  data-bs-custom-class="password-rule">
+                                                <i class="fa-solid fa-lock input-icon"></i>
+                                                <input type="password" name="password-sn" id="password-sign-up">
+                                                <div id="pass-toggle-sn" onclick="showHidesn();">
+                                                    <i class="fa-regular fa-eye show-tog"></i>
+                                                    <i class="fa-regular fa-eye-slash hide-tog"></i>
+                                                </div>
+                                                <div class="error"></div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="password-sign">
+                                            <label for="password-sign-up-rp">Nhập lại mật khẩu:</label>
+                                            <div class="input-field password-sign-input-field" data-bs-toggle="tooltip" data-bs-title="Mật khẩu có độ dài ít nhất 8 kí tự, bắt đầu bằng chữ in hoa và chứa ít nhất một chữ số."  data-bs-custom-class="password-rule">
+                                                <i class="fa-solid fa-lock input-icon"></i>
+                                                <input type="password" name="password-sn-rp" id="password-sign-up-rp">
+                                                <div id="pass-toggle-sn-rp" onclick="showHidesnrp();">
+                                                    <i class="fa-regular fa-eye show-tog"></i>
+                                                    <i class="fa-regular fa-eye-slash hide-tog"></i>
+                                                </div>
+                                                <div class="error"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="submit">
+                                            <button type="submit" id="signup-sub">Đăng kí</button>
+                                        </div>
+                                        
+                                    </fieldset>
                                     
-                                    <div class="submit">
-                                        <button type="submit" id="reset-sub">Gửi email đặt lại mật khẩu</button>
-                                    </div>
-                                    
-                                </fieldset>
-
-                                <fieldset class="change-sign-up">
-                                    <a href="#" id="back-login-link">Trở lại đăng nhập</a>
-                                </fieldset>
-                            </form>
+    
+                                    <fieldset class="sign-with">
+                                        <p class="sign-with-text">Hoặc đăng kí bằng</p>
+                                        <div class="other-med">
+                                        <a href="#"><img src="assests/img/icon/face-min.webp" alt="face-icon" class="face-icon"></a>
+                                        <a href="#"><img src="assests/img/icon/google-min.webp" alt="gg-icon" class="goo-icon"></a>
+                                        </div>
+                                    </fieldset>
+    
+                                    <fieldset class="change-sign-up">
+                                        <a href="#" id="to-login-link">Đăng nhập</a>
+                                    </fieldset>
+                                </form>
+                            </div>
+    
+    
+                            <!-- forgot pass -->
+                            <div id="reset-pass">
+                                <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
+                                <h2 class="reset-pass-form-header">Quên mật khẩu</h2>
+                                <form id="reset-pass-form" action="/">
+                                    <fieldset class="email-pass-acc">
+                                        <p id="reset-pass-guide">Liên kết đặt lại mặt khẩu sẽ được gửi vào email của bạn</p>
+                                        <div class="reset-pass">
+                                            <label for="reset-pass">Email:</label>
+                                            <div class="input-field reset-pass-input-field">
+                                                <i class="fa-regular fa-envelope input-icon"></i>
+                                                <input type="email" id="reset-pass-input" name="email">
+                                                <div class="error"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="submit">
+                                            <button type="submit" id="reset-sub">Gửi email đặt lại mật khẩu</button>
+                                        </div>
+                                        
+                                    </fieldset>
+    
+                                    <fieldset class="change-sign-up">
+                                        <a href="#" id="back-login-link">Trở lại đăng nhập</a>
+                                    </fieldset>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        
 
 
     </header>

@@ -66,7 +66,9 @@ nav .navbar .nav-links .links li {
     padding: 0 0.6rem;
 }
 
-nav .navbar .nav-links .links li a {
+
+nav .navbar .nav-links .links li a,
+nav .navbar .nav-links .links li > .branch {
     text-transform: uppercase;
     text-decoration: none;
     color: white;
@@ -119,25 +121,27 @@ nav .navbar .nav-links .links .sub-menu {
     padding: 0;
 }
 
-nav .navbar .nav-links .links .sub-menu li {
+nav .navbar .nav-links .links .sub-menu li{
     padding: 0 1rem;
     border-bottom: 1px solid var(--nav-bg-lg-layout);
 }
 
+nav .navbar .nav-links .links .sub-menu li span,
 nav .navbar .nav-links .links .sub-menu li a{
     text-transform: capitalize;
     font-size: 0.75rem;
-    font: 500;
     transition: all 0.1s;
+    font-weight: 550;
 }
 
+nav .navbar .nav-links .links .sub-menu li:hover span,
 nav .navbar .nav-links .links .sub-menu li:hover a{
     font-size: 0.8rem;
 }
 
 
 /* arrow of subnav --------------------------------------------------------*/
-nav .navbar .nav-links .links .sub-menu li .branch-4-arrow {
+nav .navbar .nav-links .links .sub-menu li .branch-4-arrow{
     line-height: 40px;
 }
 
