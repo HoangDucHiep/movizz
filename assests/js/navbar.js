@@ -206,7 +206,7 @@ const login = document.getElementById('signin-form');
 const emailLogin = document.getElementById('email-sign');
 const passwordLogin = document.getElementById('password-sign');
 
-let isFormValid = false;
+let isFormValid;
 
 login.addEventListener('submit', e => {
     validateLogin();
@@ -236,12 +236,16 @@ const phoneSignup = document.getElementById('phone-sign-up');
 const rpPasswordSignup = document.getElementById('password-sign-up-rp');
 
 
+
 signup.addEventListener('submit', e => {
-    e.preventDefault();
     validateSignup();
+    if (!isFormValid) {
+        e.preventDefault();
+    }
 });
 
 const validateSignup = () => {
+    isFormValid = true;
     const phoneValue = phoneSignup.value.trim();
     const nameValue = nameSignup.value.trim();
 
@@ -270,6 +274,14 @@ const validateSignup = () => {
     else {
         setSuccess(phoneSignup);
     }
+
+    if (emailSignup.parentElement.classList.contains('error') || nameSignup.parentElement.classList.contains('error') 
+        || passwordSignup.parentElement.classList.contains('error') || phoneSignup.parentElement.classList.contains('error')
+        || rpPasswordSignup.parentElement.classList.contains('error')) 
+        {
+            isFormValid = false;
+        }
+
 };
 
 
@@ -278,13 +290,21 @@ const resetPassForm = document.getElementById('reset-pass-form');
 const resetEmail = document.getElementById('reset-pass-input');
 
 resetPassForm.addEventListener('submit', e => {
-    e.preventDefault();
     validateReset();
+    if (!isFormValid) {
+        e.preventDefault();
+    }
 });
 
 const validateReset = () => {
+    isFormValid = true;
+
     emailValidate(resetEmail);
+    if (resetEmail.parentElement.classList.contains('error')) {
+        isFormValid = false;
+    }
 };
+
 
 
 /* tooltips */

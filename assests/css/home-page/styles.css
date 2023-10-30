@@ -38,14 +38,16 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 5%;
+    left: 3%;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: all 1s ease-in-out;
 }
-
-.main-slide .item.firstItem .slide-movie-text {
+      
+.main-slide .slick-current.slick-active .item .slide-movie-text{
+    left: 5%;
     opacity: 1;
 }
+
 
 .main-slide .item .slide-movie-text h1,
 .main-slide .item .slide-movie-text h6,

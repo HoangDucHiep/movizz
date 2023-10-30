@@ -81,29 +81,6 @@ $(document).ready(function () {
 
 
 
-    /* text effect */
-    $('.main-slide').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-
-        var $currentMovieText = $(slick.$slides[currentSlide]).find('.slide-movie-text');
-        var $nextMovieText = $(slick.$slides[nextSlide]).find('.slide-movie-text');
-
-        $nextMovieText.css({
-            'opacity': 0,
-        });
-    });
-
-    $('.main-slide').on('afterChange', function(event, slick, previousSlide, nextSlide) {
-        var $prevMovieText = $(slick.$slides[previousSlide]).find('.slide-movie-text');
-    
-        // Thiết lập tất cả các thuộc tính CSS cùng một lúc
-        $prevMovieText.css({
-            'opacity': '1',
-        });
-    });
-    
-
-
-
     /* comming soon list slide */
     let movieSlider = $('.comming-soon');
     let movieSliderSettings = {
