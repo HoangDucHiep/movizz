@@ -8,6 +8,7 @@ body{
 
 .container-anh {
     width: 90vw;
+    margin-top:5rem;
 }
 
 .container-anh p, .container-anh h4{
@@ -178,8 +179,10 @@ body{
     object-fit: cover;
 }
 
-
-.container-anh img{
+.container-anh img:nth-child(1){
+    
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     cursor: pointer;
 }
@@ -261,6 +264,12 @@ body{
     font-weight: 500;
 }
 
+#content-2{
+    display: none;
+}
+#content-3{
+    display:none;
+}
 
 /* button:active{
     background-image: linear-gradient(to right top, #d70a77 0%, #e20606 100%);
@@ -276,6 +285,7 @@ body{
     .container-anh {
         max-width: 85%;
         margin: 0 auto;
+        margin-top:5rem;
         padding: 0 0 8% 0;
     }
 
@@ -294,6 +304,7 @@ body{
     .container-anh {
         max-width: 85%;
         margin: 0 auto;
+        margin-top:5rem;
         padding: 0 0 5% 0;
     }
     
@@ -313,6 +324,7 @@ body{
     .container-anh {
         max-width: 90%;
         margin: 0 auto;
+        margin-top:5rem;
         padding: 0 0 8% 0;
     }
 
@@ -332,6 +344,7 @@ body{
     .container-anh {
         max-width: 80rem;
         margin: 0 auto;
+        margin-top:5rem;
         padding: 0 0 5% 0;
     }
 

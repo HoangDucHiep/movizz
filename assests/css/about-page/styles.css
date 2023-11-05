@@ -3,6 +3,11 @@ body {
     color: white;
 }
 
+#content3, #content2
+{
+    display: none;
+}
+
 main h1 {
     text-align: center;
     margin: 8% 10px 2%;

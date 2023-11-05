@@ -1,3 +1,9 @@
+/* color vari, and.... */
+:root {
+    --nav-bg-lg-layout: rgba(0 ,0 ,0 , 0.7);
+    --nav-bg-sm-layout: rgba(0 ,0 ,0 , 0.8);
+}
+
 /* Large layout navbar*/
 
 /* navbar --------------------------------------------------------*/
@@ -11,7 +17,6 @@ nav {
     color: #fff;
     width: 100vw;
     z-index: 1000;
-    
 }
 
 nav .navbar {
@@ -272,7 +277,7 @@ nav .navbar .nav-links .links .branch-4 .branch-4-sub-menu{
 
 
 
-/* hide sidebar at large layout--------------------------------------------------------*/
+
 
 
 
@@ -281,7 +286,7 @@ nav .navbar .nav-links .links .branch-4 .branch-4-sub-menu{
 }
 
 @media (min-width: 954px) {
-
+    /* hide sidebar at large layout--------------------------------------------------------*/
     .navbar .fa-bars,
     .nav-links .sidebar-logo-brand .logo-brand-name,
     .nav-links .sidebar-logo-brand .exit-sidebar{
@@ -408,7 +413,6 @@ nav .navbar .nav-links .links .branch-4 .branch-4-sub-menu{
 
     nav .navbar .nav-links .links li {
         display: block;
-        
     }
 
     /* sidebar submenu--------------------------------------------------------*/
@@ -812,18 +816,12 @@ label[for="remember"] {
     position: absolute;
     bottom: -70%;
     color: #ff3860;
+    border-color: #ff3860;
 }
-
-
 
 .input-field.success {
     border-color: #09c372;
 }
-
-.input-field.error {
-    border-color: #ff3860;
-}
-
 /* Footer */
 footer {
     height: fit-content;

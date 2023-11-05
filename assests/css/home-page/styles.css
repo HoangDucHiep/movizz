@@ -22,10 +22,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
     z-index: -10;
+    width: 140%;
+    height: 140%;
 }
 
 
@@ -127,7 +126,6 @@
 
 
 .movie-ticket-booking {
-    
     padding: 1% 4%;
     background-image: linear-gradient(45deg, rgb(46, 116, 255), rgb(181, 22, 255), rgb(220, 0, 165), rgb(220, 0, 165), rgb(181, 22, 255), rgb(46, 116, 255));
     border: none;
@@ -261,17 +259,12 @@
     .main-slide .item iframe {
         display: none;
     }
-
-
     
     .main-slide .item img {
         position: absolute;
         display: block;
         top: 50%;
         left: 50%;
-        -ms-transform: translate(-50%,-50%);
-        -moz-transform: translate(-50%,-50%);
-        -webkit-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);
         height: 200%;
         width: auto;
@@ -347,13 +340,11 @@
         opacity: 0.5;
         transition: all 0.4s ease-in-out;
     }
-      
-    /* Active center slide (You can change anything here for cenetr slide)*/
+    /* Active center slide */
     .center-slider .slick-current.slick-active{
         opacity: 1;
         transform: scale(0.65);
     }
-      
     
 }
 
@@ -370,7 +361,6 @@
 
 
 .main .movie-list  .movie-card .card {
-    
     border: none;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0);
