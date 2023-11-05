@@ -435,17 +435,7 @@ body{
         top: 70px;
     }
     .section1::before{
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
         background-image: url('../../img/movies-thumbs/spiderman.webp');
-        z-index: 10;
-        background-size: 150%;
-        background-repeat: no-repeat;
-        background-position: top;
     }
 }
 
